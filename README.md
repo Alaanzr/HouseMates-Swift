@@ -34,3 +34,6 @@
 
 ##### 11 - Knowledgebase 
 - Tenants knowledgebase for renting.
+
+##### UPDATE:
+- Connections: Users can 'connect' with each other, which allows a user to leave recommendations and endorsements.
