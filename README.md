@@ -76,9 +76,9 @@ var Properties = new Schema({
 
 ***Suggested API Calls***
 ```
-/appusers                                         :list of all app users
-/properties                                       :list of all properties
-/appusers/appuser_id                              :app user object for specific id
+/appusers                                         :list of all app users - DONE
+/properties                                       :list of all properties - DONE
+/appusers/appuser_id                              :app user object for specific id - DONE
 /properties/property_id                           :project object for specific id
 /appusers/appuser_id/properties                   :list of properties for a specific user
 /properties/property_id/appusers                  :list of users for a specific property
