@@ -75,7 +75,7 @@ var Properties = new Schema({
 ```
 
 ***Suggest API Calls***
-
+```
 /appusers                                         :list of all app users
 /properties                                       :list of all properties
 /appusers/appuser_id                              :app user object for specific id
@@ -90,6 +90,6 @@ var Properties = new Schema({
 
 
 Are there any others you need?
-
+```
 
 
