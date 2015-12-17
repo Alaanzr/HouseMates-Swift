@@ -51,7 +51,7 @@ Three options for ios backend:
  
 
 ##### Data Model
-
+```
 var User = new Schema({
  name :  String,
  profile_picture : String,
@@ -72,3 +72,4 @@ var Properties = new Schema({
  deposit_amount : Number,
  inclusive : [Boolean]
 });
+```
