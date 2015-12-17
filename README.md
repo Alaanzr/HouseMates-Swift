@@ -47,3 +47,28 @@ Three options for ios backend:
   1. [How to Write An iOS App that Uses a Node.js/MongoDB Web Service](http://www.raywenderlich.com/61264/write-ios-app-uses-node-jsmongodb-web-service)
   2. [Mobile Developers – Easily Build a Backend REST API with Node.js](http://www.iosinsight.com/backend-rest-api-nodejs/)
  3. [Parse](https://parse.com/docs/ios/guide)
+ 4. 
+ 
+
+##### Data Model
+
+var User = new Schema({
+ name :  String,
+ profile_picture : String,
+ properties : [Properties],
+ connections : [User]
+});
+
+var Properties = new Schema({
+ address : String,
+ post_code : String,
+ landlord_name : String,
+ landlord_contact : String,
+ contract_start : Date,
+ contract_end : Date,
+ property_type : String,
+ number_of_flatmates : String,
+ monthly_cost : Number,
+ deposit_amount : Number,
+ inclusive : [Boolean]
+});
