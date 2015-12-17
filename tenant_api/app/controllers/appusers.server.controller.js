@@ -22,3 +22,24 @@ exports.list = function(req, res, next) {
         }
     });
 };
+
+
+exports.read = function(req, res) {
+    res.json(req.appUser);
+};
+
+exports.appuser_id = function(req, res, next, id) {
+    AppUser.findOne({
+            _id: id
+        },
+        function(err, appUser) {
+            if (err) {
+                return next(err);
+            }
+            else {
+                req.appUser = appUser;
+                next();
+            }
+        }
+    );
+};
