@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title><%= title %></title>
+</head>
+  <body>
+    <div id="top">
+      <header class="header-cont">
+        <h1> Takeaway </h1>
+      <header>
+        Takeaway
+        <% if ( user ) { %>
+          <h2>Hello <%=user%> </h2>
+          <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+        <% } %>
+      </header>
+      <div class="styles">
+      <main>
+        <h1><%= title %></h1>
+
+      <div id="other">
+        <div id="logo">
+          <img src='/img/logo.jpeg' width=40 height=40>
+        </div>
+        <div id="cntrl">
+          <button id="login" type="button" class="button">Log In</button>
+          <button id="signup" type="button" class="button">Sign Up</button>
+        </div>
+      </div>
+
+    <div id="container">
+      <div id="menu">
+        <h2> Menu </h2>
+      </div>
+
+      <div id="order_container">
+        <h3>Basket</h3>
+        <p id="basket">
+          <ul id="listorder">
+          </ul>
+      </p>
+
+      </div>
+    </div>
+
+  </div>
+  </main>
+  <footer>
+    <p> Makers Academy Takeaway Project </p>
+  </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery_frontend.js"></script>
+    <script src="js/order.js"></script>
+  </body>
+</html>
