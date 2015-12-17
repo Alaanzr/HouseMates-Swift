@@ -73,3 +73,23 @@ var Properties = new Schema({
  inclusive : [Boolean]
 });
 ```
+
+***Suggest API Calls***
+
+/appusers                                         :list of all app users
+/properties                                       :list of all properties
+/appusers/appuser_id                              :app user object for specific id
+/properties/property_id                           :project object for specific id
+/appusers/appuser_id/properties                   :list of properties for a specific user
+/properties/property_id/appusers                  :list of users for a specific property
+/appusers/appuser_id/connections                  :list of connections(friends) for a specific user
+/appusers/appuser_id/connection_id                :specific connection for a specific user
+/appusers/appuser_id/connection_count             :count of number of connections for a specific user
+/appusers/appuser_id/property_count               :count of properties for a specific user
+
+
+
+Are there any others you need?
+
+
+
