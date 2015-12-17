@@ -74,7 +74,7 @@ var Properties = new Schema({
 });
 ```
 
-***Suggest API Calls***
+***Suggested API Calls***
 ```
 /appusers                                         :list of all app users
 /properties                                       :list of all properties
