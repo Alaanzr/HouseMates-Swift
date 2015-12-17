@@ -79,7 +79,7 @@ var Properties = new Schema({
 /appusers                                         :list of all app users - DONE
 /properties                                       :list of all properties - DONE
 /appusers/appuser_id                              :app user object for specific id - DONE
-/properties/property_id                           :project object for specific id
+/properties/property_id                           :project object for specific id - DONE
 /appusers/appuser_id/properties                   :list of properties for a specific user
 /properties/property_id/appusers                  :list of users for a specific property
 /appusers/appuser_id/connections                  :list of connections(friends) for a specific user
