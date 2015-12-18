@@ -44,25 +44,25 @@ exports.appuser_id = function(req, res, next, id) {
     );
 };
 
-// exports.update = function(req, res, next) {
-//     User.findByIdAndUpdate(req.user.id, req.body, function(err, user) {
-//         if (err) {
-//             return next(err);
-//         }
-//         else {
-//             res.json(user);
-//         }
-//     });
-// };
+exports.update = function(req, res, next) {
+    AppUser.findByIdAndUpdate(req.appUser.id, req.body,{new: true}, function(err, appUser) {
+        if (err) {
+            return next(err);
+        }
+        else {
+            res.json(appUser);
+        }
+    });
+};
 
 
-// exports.delete = function(req, res, next) {
-//     req.user.remove(function(err) {
-//         if (err) {
-//             return next(err);
-//         }
-//         else {
-//             res.json(req.user);
-//         }
-//     });
-// };
+exports.delete = function(req, res, next) {
+    req.appUser.remove(function(err) {
+        if (err) {
+            return next(err);
+        }
+        else {
+            res.json(req.appUser);
+        }
+    });
+};

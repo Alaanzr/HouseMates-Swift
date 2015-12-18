@@ -44,25 +44,25 @@ exports.property_id = function(req, res, next, id) {
 };
 
 
-// exports.update = function(req, res, next) {
-//     User.findByIdAndUpdate(req.user.id, req.body, function(err, user) {
-//         if (err) {
-//             return next(err);
-//         }
-//         else {
-//             res.json(user);
-//         }
-//     });
-// };
+exports.update = function(req, res, next) {
+    Property.findByIdAndUpdate(req.property.id, req.body, {new: true}, function(err, property) {
+        if (err) {
+            return next(err);
+        }
+        else {
+            res.json(property);
+        }
+    });
+};
 
 
-// exports.delete = function(req, res, next) {
-//     req.user.remove(function(err) {
-//         if (err) {
-//             return next(err);
-//         }
-//         else {
-//             res.json(req.user);
-//         }
-//     });
-// };
+exports.delete = function(req, res, next) {
+    req.property.remove(function(err) {
+        if (err) {
+            return next(err);
+        }
+        else {
+            res.json(req.property);
+        }
+    });
+};
