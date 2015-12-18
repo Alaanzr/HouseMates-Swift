@@ -80,7 +80,8 @@ var Properties = new Schema({
 /properties                                       :list of all properties - DONE GET, POST
 /appusers/appuser_id                              :app user object for specific id - DONE GET, UPDATE, DELETE
 /properties/property_id                           :project object for specific id - DONE GET, UPDATE, DELETE
-/appusers/appuser_id/properties                   :list of properties for a specific user WORKING ON POST
+/appusers_properties/appuser_id                   :list of properties for a specific user - DONE GET
+
 /properties/property_id/appusers                  :list of users for a specific property
 /appusers/appuser_id/connections                  :list of connections(friends) for a specific user
 /appusers/appuser_id/connection_id                :specific connection for a specific user
