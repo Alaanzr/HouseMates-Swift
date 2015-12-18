@@ -92,8 +92,8 @@ var Properties = new Schema({
 Are there any others you need?
 ```
 
-# Make the first get request on Swift 
-### branch used "3-link-swift-to-Api"
+## Make the first get request on Swift 
+#### branch used "3-link-swift-to-Api"
 
 We are making the first get request in Swift to our DB using a dummy user profile.
 We are using JSON and "SwiftyJSON" to manipulate the data.
