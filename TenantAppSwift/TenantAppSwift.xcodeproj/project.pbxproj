@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A473D1C257367008DCE8F /* SwiftyJSON.swift */; };
+		49F531E01C2585920093F995 /* crudPropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F531DF1C2585920093F995 /* crudPropertyService.swift */; };
 		CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */; };
 		CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7111C22D1B6005692F2 /* ViewController.swift */; };
 		CA70F7151C22D1B6005692F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA70F7131C22D1B6005692F2 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		498A473D1C257367008DCE8F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		49F531DF1C2585920093F995 /* crudPropertyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crudPropertyService.swift; sourceTree = "<group>"; };
 		CA70F70C1C22D1B6005692F2 /* TenantAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenantAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA70F7111C22D1B6005692F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
+				49F531DF1C2585920093F995 /* crudPropertyService.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
 				498A473D1C257367008DCE8F /* SwiftyJSON.swift */,
 				CA70F71B1C22D1B6005692F2 /* Info.plist */,
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F531E01C2585920093F995 /* crudPropertyService.swift in Sources */,
 				CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
