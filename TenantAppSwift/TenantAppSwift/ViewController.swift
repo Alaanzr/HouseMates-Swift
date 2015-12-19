@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         crudProperty().getUser()
+        crudProperty().postDataToURL()
 
         // Do any additional setup after loading the view, typically from a nib.
     }
