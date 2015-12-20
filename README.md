@@ -4,6 +4,8 @@
 
 ##### 1 - Profiles
 - Creating and displaying user profiles.
+- Two types of profile display:
+ - summary for public profile with summary of user employment, rental resume.  For example, Pastry chef working in Zone 1 living in Zone 2 sharing house paying £500-800 pcm with 5 year rental history covering house and flat shares.  Interested in moving to any Zone 2 to 4 location house or flat £400-800 pcm.  Deposit no more than £800. One month notice.
 
 ##### 2 - GPS Search
 - Map users by current location.
