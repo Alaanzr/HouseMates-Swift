@@ -81,13 +81,14 @@ var Properties = new Schema({
 /appusers/appuser_id                              :app user object for specific id - DONE GET, UPDATE, DELETE
 /properties/property_id                           :project object for specific id - DONE GET, UPDATE, DELETE
 /appusers_properties/appuser_id                   :list of properties for a specific user - DONE GET
-/appusers_connections/appuser_id                  :list of connections(friends) for a specific user
-/properties_appusers/property_id                  :list of users for a specific property
-
-/appusers/appuser_id/connection_count             :count of number of connections for a specific user
-/appusers/appuser_id/property_count               :count of properties for a specific user
 
 
+example update of user connection:
+http verb: PUT  url: http://localhost:1337/appusers/56743397aa3babfd5bd45a8b 
+body: 
+{
+    "connections": ["56743384aa3babfd5bd45a8a"]
+}
 
 Are there any others you need?
 ```
