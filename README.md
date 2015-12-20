@@ -88,15 +88,15 @@ var Properties = new Schema({
 
 ***Suggested API Calls***
 ```
-/appusers                                         :list of all app users - DONE GET, POST
+/users                                            :list of all users - DONE GET, POST
 /properties                                       :list of all properties - DONE GET, POST
-/appusers/appuser_id                              :app user object for specific id - DONE GET, UPDATE, DELETE
+/users/user_id                                    :user object for specific id - DONE GET, UPDATE, DELETE
 /properties/property_id                           :project object for specific id - DONE GET, UPDATE, DELETE
-/appusers_properties/appuser_id                   :list of properties for a specific user - DONE GET
+/users_properties/user_id                         :list of properties for a specific user - DONE GET
 
 
 example update of user connection:
-http verb: PUT  url: http://localhost:1337/appusers/56743397aa3babfd5bd45a8b 
+http verb: PUT  url: http://localhost:1337/users/56743397aa3babfd5bd45a8b 
 body: 
 {
   "connections": ["56743384aa3babfd5bd45a8a"]
@@ -104,7 +104,7 @@ body:
 
 
 example post of new user:
-http verb: POST  url:https://hxxxxxxxx.herokuapp.com/appusers
+http verb: POST  url:https://hxxxxxxxx.herokuapp.com/users
 body:
 {
   "name": "Mattia Assogna",
@@ -131,7 +131,7 @@ body:
 
 
 example post of deleting property:
-http verb: DELETE  url: http://localhost:1337/appusers/56743397aa3babfd5bd45a8b 
+http verb: DELETE  url: http://localhost:1337/users/56743397aa3babfd5bd45a8b 
 
 Are there any others you need?
 ```
