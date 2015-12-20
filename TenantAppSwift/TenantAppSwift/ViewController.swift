@@ -137,7 +137,7 @@ class ViewController: UIViewController {
     func deleteUser() {
         
         
-        let deleteUser: String = "https://housematey.herokuapp.com/appusers/5676dd86f564dc11001aa25e"
+        let deleteUser: String = "https://housematey.herokuapp.com/appusers/5676d0614feb521100ee84d5"
         let deleteUserRequest = NSMutableURLRequest(URL: NSURL(string: deleteUser)!)
         deleteUserRequest.HTTPMethod = "DELETE"
         
