@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         getUserInfo()
         createUser()
         createUserProperty()
+        createNewConnection("5676d0614feb521100ee84d5")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -205,6 +206,47 @@ func createUserProperty() {
         do {
             url.HTTPBody = try NSJSONSerialization.dataWithJSONObject(newPropertyPut, options: NSJSONWritingOptions())
             print(newPropertyPut)
+            
+        } catch {
+            print("bad things happened")
+        }
+        
+        // Make the POST call and handle it in a completion handler
+        let task = session.dataTaskWithRequest(url, completionHandler: { ( data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            
+            // Make sure we get an OK response
+            guard let realResponse = response as? NSHTTPURLResponse where
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
+            }
+            
+            // Read the JSON
+            if let putString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+                // Print what we got from the call
+                print("PUT: " + putString)
+                
+            }
+            
+        })
+        task.resume()
+    }
+
+    // PUT: assign connection to user
+    
+    func createNewConnection(userId: String) {
+        
+        let session = NSURLSession.sharedSession()
+        let newConnectionPut: NSDictionary = ["connections": [userId]]
+        let path: String = "https://housematey.herokuapp.com/appusers/567441b104dabd110041f851"
+        let url = NSMutableURLRequest(URL: NSURL(string: path)!)
+        url.HTTPMethod = "PUT"
+        
+        // set new post as HTTPBody for request
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        do {
+            url.HTTPBody = try NSJSONSerialization.dataWithJSONObject(newConnectionPut, options: NSJSONWritingOptions())
+            print(newConnectionPut)
             
         } catch {
             print("bad things happened")
