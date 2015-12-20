@@ -87,8 +87,36 @@ example update of user connection:
 http verb: PUT  url: http://localhost:1337/appusers/56743397aa3babfd5bd45a8b 
 body: 
 {
-    "connections": ["56743384aa3babfd5bd45a8a"]
+  "connections": ["56743384aa3babfd5bd45a8a"]
 }
+
+
+example post of new user:
+http verb: POST  url:https://hxxxxxxxx.herokuapp.com/appusers
+body:
+{
+  "name": "Mattia Assogna",
+  "profile_picture": "mypingpongpicture.jpg",
+  "connections": [],
+  "properties": ["5674404004dabd110041f850","56743f5004dabd110041f84e"]
+}
+
+
+example post of new property:
+http verb: POST  https://hxxxxxxx.herokuapp.com/properties
+body:
+{
+  "post_code": "AB1 0MG",
+  "street_name": "High Road",
+  "landlord_name": "Mr Fixer",
+  "landlord_contact_details": "555 777 911",
+  "property_type": "Flat",
+  "number_of_flatmates": 1,
+  "monthly_cost": 299,
+  "deposit_amount": 200,
+  "inclusive": false
+}
+
 
 Are there any others you need?
 ```
