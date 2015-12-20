@@ -18,7 +18,7 @@
    * More pictures.
 
 ##### 2 - GPS Search
-- Map users by current location.
+- Map users by current location. Aim to visualise unfimilar location using map.
 
 ##### 3 - Document Store 
 - Facilitate document storage for the user.
@@ -54,7 +54,7 @@
 **Backend Hello World**
 
 Three options for ios backend:
- 1. [Firebase](https://www.firebase.com/docs/ios/examples.html)
+ 1. [Firebase](https://www.firebase.com/docs/ios/examples.html) 
  2. NodeJS:
   1. [How to Write An iOS App that Uses a Node.js/MongoDB Web Service](http://www.raywenderlich.com/61264/write-ios-app-uses-node-jsmongodb-web-service)
   2. [Mobile Developers – Easily Build a Backend REST API with Node.js](http://www.iosinsight.com/backend-rest-api-nodejs/)
