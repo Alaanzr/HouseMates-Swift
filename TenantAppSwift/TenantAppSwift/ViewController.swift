@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUserInfo()
-        createUser()
+//        getUserInfo()
+//        createUser()
+        deleteUser()
     }
 
     override func didReceiveMemoryWarning() {
@@ -130,6 +131,24 @@ class ViewController: UIViewController {
         task.resume()
     }
     
+    func deleteUser() {
+        
+        let deleteUser: String = "https://housematey.herokuapp.com/appusers/5676dd86f564dc11001aa25e"
+        let deleteUserRequest = NSMutableURLRequest(URL: NSURL(string: deleteUser)!)
+        deleteUserRequest.HTTPMethod = "DELETE"
+        
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
+        
+        let task = session.dataTaskWithRequest(deleteUserRequest, completionHandler: {
+            (data, response, error) in
+            guard let _ = data else {
+                print("error calling DELETE on /user")
+                return
+            }
+        })
+        task.resume()
+    }
 
   }
 
