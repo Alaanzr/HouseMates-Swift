@@ -9,8 +9,8 @@
  - DETAILED for connections (people that are proposing to share accomodation). 
  
  - For example:
-   * Potrait profile picture
-   * Profile description 'age', relationship status, nationality/languages, bio (max 100 words)
+  * Potrait profile picture
+  * Profile description 'age', relationship status, nationality/languages, bio (max 100 words)
    * Summary of work history from linkedin / entered by user, include work locations.
    * Current accommodation details, address, rent, deposit, notice, how many sharers, property type, landlord reference or contact details.
    * Rental history details (last 3 years), rent, address, how many sharers, property type, landlord reference or contact.
