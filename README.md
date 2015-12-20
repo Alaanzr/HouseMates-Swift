@@ -103,7 +103,7 @@ body:
 
 
 example post of new property:
-http verb: POST  https://hxxxxxxx.herokuapp.com/properties
+http verb: POST  url: https://hxxxxxxx.herokuapp.com/properties
 body:
 {
   "post_code": "AB1 0MG",
@@ -117,6 +117,9 @@ body:
   "inclusive": false
 }
 
+
+example post of deleting property:
+http verb: DELETE  url: http://localhost:1337/appusers/56743397aa3babfd5bd45a8b 
 
 Are there any others you need?
 ```
