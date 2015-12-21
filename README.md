@@ -64,11 +64,37 @@ Three options for ios backend:
 
 ##### Data Model
 ```
-var User = new Schema({
- name :  String,
- profile_picture : String,
- properties : [Properties],
- connections : [User]
+var UserSchema = new Schema({
+    firstName: String,
+    lastName: String,
+    email: {
+              type: String,
+              match: [/.+\@.+\..+/,
+              "Please fill a valid e-mail address"]
+    },
+    username: {
+              type: String,
+              trim: true,
+              required: 'Username is required',
+              unique: true
+    },
+    password: {
+              type: String,
+              validate: [
+              function(password) {
+                return password && password.length > 6;
+              },
+              'Password should be longer']
+    },
+    salt: {type: String},
+    provider: {type: String, required: 'Provider is required'},
+    providrId: String,
+    providerData: {},
+    created: {type: Date, default: Date.now},
+
+    profile_picture: String,
+    properties: [{ type: Schema.Types.ObjectId, ref: 'Property', autopopulate: true }],
+    connections: [{ type: Schema.Types.ObjectId, ref: 'User', autopopulate: {select: '-connections -requests_sent -requests_recd -password -salt'} }]
 });
 
 var Properties = new Schema({
