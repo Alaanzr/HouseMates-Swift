@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		494E6BC01C282CF4004F685A /* getUserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E6BBF1C282CF4004F685A /* getUserId.swift */; };
 		498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A473D1C257367008DCE8F /* SwiftyJSON.swift */; };
+		499EC5151C28587100D86BD4 /* createNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EC5141C28587100D86BD4 /* createNewUser.swift */; };
 		CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */; };
 		CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7111C22D1B6005692F2 /* ViewController.swift */; };
 		CA70F7151C22D1B6005692F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA70F7131C22D1B6005692F2 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		494E6BBF1C282CF4004F685A /* getUserId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getUserId.swift; sourceTree = "<group>"; };
 		498A473D1C257367008DCE8F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		499EC5141C28587100D86BD4 /* createNewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createNewUser.swift; sourceTree = "<group>"; };
 		CA70F70C1C22D1B6005692F2 /* TenantAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenantAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA70F7111C22D1B6005692F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
+				499EC5141C28587100D86BD4 /* createNewUser.swift */,
 				494E6BBF1C282CF4004F685A /* getUserId.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
 				498A473D1C257367008DCE8F /* SwiftyJSON.swift */,
@@ -257,6 +260,7 @@
 				CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
 				494E6BC01C282CF4004F685A /* getUserId.swift in Sources */,
+				499EC5151C28587100D86BD4 /* createNewUser.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

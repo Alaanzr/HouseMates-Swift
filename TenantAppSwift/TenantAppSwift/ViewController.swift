@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             getUserId().getUser()
+            newUser().createUser()
+        
+
         }
         
         override func didReceiveMemoryWarning() {
@@ -113,8 +116,8 @@ class ViewController: UIViewController {
 //   func createUser() {
 //    
 //        let session = NSURLSession.sharedSession()
-//        let newUserPost: NSDictionary = ["name": "Marco Polo", "profile_picture": "mypicture.jpg"]
-//        let path: String = "https://housematey.herokuapp.com/appusers"
+//        let newUserPost: NSDictionary = ["firstName": "Marco Polo", "lastName": "mypicture.jpg"]
+//        let path: String = "https://housematey.herokuapp.com/users/"
 //        let url = NSMutableURLRequest(URL: NSURL(string: path)!)
 //        url.HTTPMethod = "POST"
 //    
@@ -148,7 +151,7 @@ class ViewController: UIViewController {
 //    })
 //        task.resume()
 //    }
-//    
+//
 //    func deleteUser() {
 //        
 //        

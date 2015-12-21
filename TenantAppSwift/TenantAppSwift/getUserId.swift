@@ -19,14 +19,15 @@ class getUserId {
         let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             let json = JSON(data: data!)
-            var count = 1
+
+            var count = 0
             
             for (index, object) in json {
                 let firstName = object["firstName"].stringValue
                 let lastName = object["lastName"].stringValue
                 
-                print("user \(count): \(firstName, lastName)")
                 count += 1
+                print("user \(count): \(firstName, lastName)")
                 
                 if firstName == "Mattia" && lastName == "Assogna" {
                     let id = object["_id"].stringValue
@@ -50,9 +51,13 @@ class getUserId {
                     }
                 }
             }
+            
+            print("Tot users: \(count)")
 
         }
-        
+
         task.resume()
     }
+    
+    
 }
