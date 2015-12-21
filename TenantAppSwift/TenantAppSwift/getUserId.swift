@@ -19,28 +19,38 @@ class getUserId {
         let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             let json = JSON(data: data!)
+            var count = 1
             
             for (index, object) in json {
                 let firstName = object["firstName"].stringValue
                 let lastName = object["lastName"].stringValue
                 
+                print("user \(count): \(firstName, lastName)")
+                count += 1
+                
                 if firstName == "Mattia" && lastName == "Assogna" {
                     let id = object["_id"].stringValue
                     let properties = object["properties"]
                     let connections = object["connections"]
-                    print("user id: \(firstName, id)")
+                    print("user searched: \(firstName), ID: \(id)")
                     
-                        for (index, object) in connections {
-                            print(object)
-                        }
+                    for (index, object) in connections {
+                        let connection = object["fullName"]
+                        print("User connections: \(connection)")
+                    }
                     
+                    if properties.isEmpty {
+                        print("No properties")
+                        
+                    } else {
+                        
                         for (index, object) in properties {
-                            let cost = object["monthly_cost"].stringValue
-                            print("monthly cost: \(cost)")
                             print(object)
                         }
+                    }
                 }
             }
+
         }
         
         task.resume()
