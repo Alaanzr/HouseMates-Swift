@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            getUserId().getUser()
-            newUser().createUser()
+            getService().getUser()
+            deleteService().deleteUser()
+//            createService().createUser()
         
 
         }

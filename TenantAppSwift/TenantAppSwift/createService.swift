@@ -8,7 +8,7 @@
 
 import Foundation
 
-class newUser {
+class createService {
         
     func createUser() {
         let postEndpoint: String = "https://housematey.herokuapp.com/users/"
