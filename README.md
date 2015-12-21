@@ -94,6 +94,8 @@ var Properties = new Schema({
 /properties/property_id                           :project object for specific id - DONE GET, UPDATE, DELETE
 /users_properties/user_id                         :list of properties for a specific user - DONE GET
 
+Note: to add a user you must signup user on https://housematey.herokuapp.com/signup with First and last name, username and password.  Please use the username as password to make testing easier.
+
 
 example update of user connection:
 http verb: PUT  url: http://localhost:1337/users/56743397aa3babfd5bd45a8b 
