@@ -1,42 +1,25 @@
 //
-//  crudPropertyService.swift
-//  TenantAppSwift
+//  postUserProperty.swift
+//  testApitTenant
 //
-//  Created by Mattia on 19/12/2015.
-//  Copyright © 2015 TenantTeam. All rights reserved.
+//  Created by Mattia on 21/12/2015.
+//  Copyright © 2015 Mattia. All rights reserved.
 //
 
 import Foundation
 
-class crudProperty {
-
-
-func getUser() {
+class postUserProperty: getUserInfo {
     
-    
-    let path = "https://housematey.herokuapp.com/appusers"
-    let url = NSURL(string: path)
-    let session = NSURLSession.sharedSession()
-    let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-        
-        let json = JSON(data: data!)
-        
-        let name = json[1]["name"]
-        print(name)
+    override func getUser() {
+        <#code#>
     }
-    
-    task.resume()
-    
-    }
-    
-    
     func postDataToURL() {
         
         // Setup the session to make REST POST call
         let postEndpoint: String = "https://housematey.herokuapp.com/properties"
         let url = NSURL(string: postEndpoint)!
         let session = NSURLSession.sharedSession()
-        let postParams : [String: AnyObject] = ["post_code": "Hello POST world"]
+        let postParams : [String: AnyObject] = ["post_code": "YESS"]
         
         // Create the request
         let request = NSMutableURLRequest(URL: url)
@@ -59,13 +42,12 @@ func getUser() {
             }
             
             // Read the JSON
-//            if let postString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
-//                // Print what we got from the call
-//                print("POST: " + postString)
-//                self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
-//            }
+            //            if let postString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+            //                // Print what we got from the call
+            //                print("POST: " + postString)
+            //                self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
+            //            }
             
         }).resume()
     }
-
 }
