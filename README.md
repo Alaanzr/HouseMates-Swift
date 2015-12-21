@@ -160,3 +160,5 @@ I propose adding the following in order to meet the basic functionality of app:
 
 We are making the first get request in Swift to our DB using a dummy user profile.
 We are using JSON and "SwiftyJSON" to manipulate the data.
+
+Tests added for api run `jasmine-node spec`.  Now working on adding social network functionality.
