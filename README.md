@@ -146,11 +146,12 @@ I propose adding the following in order to meet the basic functionality of app:
    and another for public summary info including accommodation wants such as genral location, 
    rent range, date available. Private object hidden from request sent 
    and recived arrays in all requests.  Only can view in connection array.
-5. General Search of user summary info by:
+5. General search of user objects by:
   Location
   Monthly rent that can pay
   Date when could move in
+  Jobs
   Males / Females
- 
+  Interests
 ```
 
