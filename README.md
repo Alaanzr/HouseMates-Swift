@@ -7,7 +7,7 @@
 - Two types of profile display:
  - SUMMARY for public profile with summary of user's employment, rental resume and interests.  For example, 'No picture', Pastry chef (female 20 -30) working in Zone 1 living in Zone 2 sharing house paying £500-800 pcm with 4-5 year rental history covering house and flat shares.  WANTED any Zone 2 to 4 location house or flat £400-800 pcm.  Deposit no more than £800. One month notice. Interests heavy metal and skiing.  If OFFERING then also include property details and other sharers profiles but maybe this is phase II.
  - DETAILED for connections (people that are proposing to share accomodation). 
- 
+
  - For example:
   * Potrait profile picture
   * Profile description 'age', relationship status, nationality/languages, bio (max 100 words)
@@ -97,8 +97,8 @@ var Properties = new Schema({
 Note: to add a user you must signup user on https://housematey.herokuapp.com/signup with First and last name, username and password.  Please use the username as password to make testing easier.
 ```
 example update of user connection:
-http verb: PUT  url: http://localhost:1337/users/56743397aa3babfd5bd45a8b 
-body: 
+http verb: PUT  url: http://localhost:1337/users/56743397aa3babfd5bd45a8b
+body:
 {
   "connections": ["56743384aa3babfd5bd45a8a"]
 }
@@ -155,3 +155,8 @@ I propose adding the following in order to meet the basic functionality of app:
    Interests
 ```
 
+## Make the first get request on Swift 
+#### branch used "3-link-swift-to-Api"
+
+We are making the first get request in Swift to our DB using a dummy user profile.
+We are using JSON and "SwiftyJSON" to manipulate the data.
