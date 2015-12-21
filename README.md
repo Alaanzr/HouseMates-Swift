@@ -136,5 +136,18 @@ http verb: DELETE  url: http://localhost:1337/users/56743397aa3babfd5bd45a8b
 
 Are there any others you need?
 ```
-
+I propose adding the following in order to meet the basic functionality of app:
+```
+1. Adding array of connection requests sent to user object
+2. Adding array of connection requests received to user object
+3. API call '/user_connection/user_id1,user_id2' POST (user_id1 to request connection to user_id2 ),
+   PUT (to make connection), DELETE (to end connection)
+4. Add one object for private details(rental history, current employment) and another for public summary info including accommodation wants such as genral location, rent range, date available. Private object hidden from request sent and recived arrays in all requests.  Only can view in connection array.
+5. General Search of user summary info by:
+  Location
+  Monthly rent that can pay
+  Date when could move in
+  Males / Females
+ 
+```
 
