@@ -13,7 +13,7 @@ class deleteService {
     func deleteUser() {
         
         
-                let deleteUser: String = "https://housematey.herokuapp.com/users/56783d6e7f47911100f5c48b"
+                let deleteUser: String = "https://housematey.herokuapp.com/users/567840e77f47911100f5c48f"
                 let deleteUserRequest = NSMutableURLRequest(URL: NSURL(string: deleteUser)!)
                 deleteUserRequest.HTTPMethod = "DELETE"
         
