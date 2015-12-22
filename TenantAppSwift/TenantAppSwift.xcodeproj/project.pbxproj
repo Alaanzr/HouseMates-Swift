@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494E6BC01C282CF4004F685A /* getService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494E6BBF1C282CF4004F685A /* getService.swift */; };
 		498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A473D1C257367008DCE8F /* SwiftyJSON.swift */; };
-		49F531E01C2585920093F995 /* crudPropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F531DF1C2585920093F995 /* crudPropertyService.swift */; };
+		499EC5151C28587100D86BD4 /* createService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EC5141C28587100D86BD4 /* createService.swift */; };
+		499EC5191C2875B400D86BD4 /* deleteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EC5181C2875B400D86BD4 /* deleteService.swift */; };
+		499EC51B1C28802800D86BD4 /* editService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EC51A1C28802800D86BD4 /* editService.swift */; };
 		CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */; };
 		CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7111C22D1B6005692F2 /* ViewController.swift */; };
 		CA70F7151C22D1B6005692F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA70F7131C22D1B6005692F2 /* Main.storyboard */; };
@@ -34,8 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		494E6BBF1C282CF4004F685A /* getService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getService.swift; sourceTree = "<group>"; };
 		498A473D1C257367008DCE8F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		49F531DF1C2585920093F995 /* crudPropertyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crudPropertyService.swift; sourceTree = "<group>"; };
+		499EC5141C28587100D86BD4 /* createService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createService.swift; sourceTree = "<group>"; };
+		499EC5181C2875B400D86BD4 /* deleteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = deleteService.swift; path = ../deleteService.swift; sourceTree = "<group>"; };
+		499EC51A1C28802800D86BD4 /* editService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editService.swift; sourceTree = "<group>"; };
 		CA70F70C1C22D1B6005692F2 /* TenantAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenantAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA70F7111C22D1B6005692F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +105,10 @@
 			children = (
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
-				49F531DF1C2585920093F995 /* crudPropertyService.swift */,
+				494E6BBF1C282CF4004F685A /* getService.swift */,
+				499EC5141C28587100D86BD4 /* createService.swift */,
+				499EC51A1C28802800D86BD4 /* editService.swift */,
+				499EC5181C2875B400D86BD4 /* deleteService.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
 				498A473D1C257367008DCE8F /* SwiftyJSON.swift */,
 				CA70F71B1C22D1B6005692F2 /* Info.plist */,
@@ -254,9 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F531E01C2585920093F995 /* crudPropertyService.swift in Sources */,
 				CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
+				494E6BC01C282CF4004F685A /* getService.swift in Sources */,
+				499EC5151C28587100D86BD4 /* createService.swift in Sources */,
+				499EC5191C2875B400D86BD4 /* deleteService.swift in Sources */,
+				499EC51B1C28802800D86BD4 /* editService.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
