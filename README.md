@@ -190,6 +190,8 @@ We are using JSON and "SwiftyJSON" to manipulate the data.
 Tests added for api run `jasmine-node spec`.  Now working on adding social network functionality.
 
 
+##Swift Login Using BAsic Auth to be Added
+
 Later today I will update the api to include api login using basic auth see this [Using Basic auth with swift](http://stackoverflow.com/questions/24379601/how-to-make-an-http-request-basic-auth-in-swift)
 
 The url that will need to be called is '/api/signin'
