@@ -188,3 +188,19 @@ We are making the first get request in Swift to our DB using a dummy user profil
 We are using JSON and "SwiftyJSON" to manipulate the data.
 
 Tests added for api run `jasmine-node spec`.  Now working on adding social network functionality.
+
+
+Later today I will update the api to include api login using basic auth see this [Using Basic auth with swift](http://stackoverflow.com/questions/24379601/how-to-make-an-http-request-basic-auth-in-swift)
+
+The url that will need to be called is '/api/signin'
+
+You can register(sign up) a user by creating a user object.
+
+Then can signin using GET /api/signin and pass username:password using Basic Auth.  That user’s object will then be returned.
+
+The returned user object contains the user.id .
+
+Tell me when you want me to update this on production.
+
+
+
