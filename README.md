@@ -222,6 +222,8 @@ I propose adding the following in order to meet the basic functionality of app:
 We are making the first get request in Swift to our DB using a dummy user profile.
 We are using JSON and "SwiftyJSON" to manipulate the data.
 
+
+## Run API test Using Below:
 Tests added for api run `jasmine-node spec`.  Now working on adding social network functionality.
 
 
@@ -239,5 +241,12 @@ The returned user object contains the user.id .
 
 This is now in production.
 
-
+##Connection API Added
+```
+API call '/user_connection/user_id1/user_id2'
+GET: CHECK a connection user2 is a connection of user1,
+POST: send REQUEST for a connection from user1 to user2,
+PUT: ACCEPT a connection request recd (user2) and request sent (user1) and add connections,
+DELETE DISCONNECT a connection between user1 and user2
+```
 
