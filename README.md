@@ -202,7 +202,7 @@ Then can signin using GET /api/signin and pass username:password using Basic Aut
 
 The returned user object contains the user.id .
 
-Tell me when you want me to update this on production.
+This is now in production.
 
 
 
