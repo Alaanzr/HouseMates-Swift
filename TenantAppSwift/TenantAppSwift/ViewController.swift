@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 //
 //            editService().editUser()
 //            editService().editProperty()
-//            getService().getUser()
+            getService().getUser()
 //            deleteService().deleteUser()
         
 
@@ -41,7 +41,10 @@ class ViewController: UIViewController {
     
     @IBAction func signin(sender: UIButton) {
         
+       self.performSegueWithIdentifier("SignInComplete", sender: self)
+        
     }
+    
     
         
     }

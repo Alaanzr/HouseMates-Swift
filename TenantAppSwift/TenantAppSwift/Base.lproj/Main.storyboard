@@ -58,11 +58,41 @@
                     <connections>
                         <outlet property="passwordSignIn" destination="rMD-fL-mXy" id="msA-D7-zqH"/>
                         <outlet property="usernameSignIn" destination="2Uf-PV-iiX" id="35U-tC-fAn"/>
+                        <segue destination="19S-vw-EcA" kind="modal" identifier="SignInComplete" id="fE2-qc-kmw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547" y="340"/>
+            <point key="canvasLocation" x="668" y="342"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="pQ4-m4-z2O">
+            <objects>
+                <tableViewController id="19S-vw-EcA" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3JZ-MR-Qvp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iDQ-yF-F1G">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iDQ-yF-F1G" id="Pu8-gF-9rK">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="19S-vw-EcA" id="tR0-fB-JRw"/>
+                            <outlet property="delegate" destination="19S-vw-EcA" id="Nuc-Zb-KAT"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOg-sC-KUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="342"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="iqE-XV-Plx">
