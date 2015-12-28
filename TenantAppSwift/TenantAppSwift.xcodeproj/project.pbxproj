@@ -18,6 +18,9 @@
 		CA70F7251C22D1B6005692F2 /* TenantAppSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7241C22D1B6005692F2 /* TenantAppSwiftTests.swift */; };
 		CA70F7301C22D1B6005692F2 /* TenantAppSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F72F1C22D1B6005692F2 /* TenantAppSwiftUITests.swift */; };
 		CA70F7C41C2EAF75005692F2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7C31C2EAF75005692F2 /* SignupViewController.swift */; };
+		CA70F7C81C317D4E005692F2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7C71C317D4E005692F2 /* ProfileTableViewCell.swift */; };
+		CA70F7CC1C31852D005692F2 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7CB1C31852D005692F2 /* Property.swift */; };
+		CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		CA70F72F1C22D1B6005692F2 /* TenantAppSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantAppSwiftUITests.swift; sourceTree = "<group>"; };
 		CA70F7311C22D1B6005692F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA70F7C31C2EAF75005692F2 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CA70F7C71C317D4E005692F2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		CA70F7CB1C31852D005692F2 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = ../ProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +113,14 @@
 			children = (
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
+				CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */,
+				CA70F7C71C317D4E005692F2 /* ProfileTableViewCell.swift */,
 				494E6BBF1C282CF4004F685A /* getService.swift */,
 				499EC5141C28587100D86BD4 /* createService.swift */,
 				499EC51A1C28802800D86BD4 /* editService.swift */,
 				499EC5181C2875B400D86BD4 /* deleteService.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
+				CA70F7CB1C31852D005692F2 /* Property.swift */,
 				CA70F7C31C2EAF75005692F2 /* SignupViewController.swift */,
 				498A473D1C257367008DCE8F /* SwiftyJSON.swift */,
 				CA70F71B1C22D1B6005692F2 /* Info.plist */,
@@ -267,12 +276,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */,
+				CA70F7CC1C31852D005692F2 /* Property.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
 				CA70F7C41C2EAF75005692F2 /* SignupViewController.swift in Sources */,
+				CA70F7C81C317D4E005692F2 /* ProfileTableViewCell.swift in Sources */,
 				494E6BC01C282CF4004F685A /* getService.swift in Sources */,
 				499EC5151C28587100D86BD4 /* createService.swift in Sources */,
 				499EC5191C2875B400D86BD4 /* deleteService.swift in Sources */,
 				499EC51B1C28802800D86BD4 /* editService.swift in Sources */,
+				CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
