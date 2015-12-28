@@ -64,9 +64,41 @@ Three options for ios backend:
 
 ##### Data Model
 ```
+var PropertySchema = new Schema ({
+
+  location_area: String,
+
+  post_code: String,
+
+  street_name: String,
+
+  landlord_name: String,
+
+  landlord_contact_details: String,
+
+  contract_start: Date,
+
+  contract_end :Date,
+
+  property_type: String,
+
+  number_of_flatmates: Number,
+
+  monthly_cost: Number,
+
+  deposit_amount: Number,
+
+  inclusive: Boolean
+
+});
+
+
 var UserSchema = new Schema({
+
     firstName: String,
+
     lastName: String,
+
     email: {
               type: String,
               match: [/.+\@.+\..+/,
@@ -87,29 +119,32 @@ var UserSchema = new Schema({
               'Password should be longer']
     },
     salt: {type: String},
+
     provider: {type: String, required: 'Provider is required'},
+
     providrId: String,
+
     providerData: {},
+
     created: {type: Date, default: Date.now},
 
     profile_picture: String,
-    properties: [{ type: Schema.Types.ObjectId, ref: 'Property', autopopulate: true }],
-    connections: [{ type: Schema.Types.ObjectId, ref: 'User', autopopulate: {select: '-connections -requests_sent -requests_recd -password -salt'} }]
-});
 
-var Properties = new Schema({
- address : String,
- post_code : String,
- landlord_name : String,
- landlord_contact : String,
- contract_start : Date,
- contract_end : Date,
- property_type : String,
- number_of_flatmates : String,
- monthly_cost : Number,
- deposit_amount : Number,
- inclusive : [Boolean]
-});
+    properties: [{ type: Schema.Types.ObjectId, ref: 'Property', autopopulate: true }],
+
+    connections: [{ type: Schema.Types.ObjectId, ref: 'User', autopopulate: {select: '-connections -requests_sent -requests_recd -password -salt'} }],
+
+    requests_sent: [{ type: Schema.Types.ObjectId, ref: 'User', autopopulate: {select: '-connections -requests_sent -requests_recd -password -salt'} }],
+
+    requests_recd: [{ type: Schema.Types.ObjectId, ref: 'User', autopopulate: {select: '-connections -requests_sent -requests_recd -password -salt'} }],
+
+    currentArea: String,
+
+    currentRentBand: Number,
+
+    currentNoticePeriodDays: Number
+
+  });
 ```
 
 ***Suggested API Calls***
@@ -187,4 +222,31 @@ I propose adding the following in order to meet the basic functionality of app:
 We are making the first get request in Swift to our DB using a dummy user profile.
 We are using JSON and "SwiftyJSON" to manipulate the data.
 
+
+## Run API test Using Below:
 Tests added for api run `jasmine-node spec`.  Now working on adding social network functionality.
+
+
+##Swift Login Using BAsic Auth to be Added
+
+Later today I will update the api to include api login using basic auth see this [Using Basic auth with swift](http://stackoverflow.com/questions/24379601/how-to-make-an-http-request-basic-auth-in-swift)
+
+The url that will need to be called is '/api/signin'
+
+You can register(sign up) a user by creating a user object.
+
+Then can signin using GET /api/signin and pass username:password using Basic Auth.  That user’s object will then be returned.
+
+The returned user object contains the user.id .
+
+This is now in production.
+
+##Connection API Added
+```
+API call '/user_connection/user_id1/user_id2'
+GET: CHECK a connection user2 is a connection of user1,
+POST: send REQUEST for a connection from user1 to user2,
+PUT: ACCEPT a connection request recd (user2) and request sent (user1) and add connections,
+DELETE DISCONNECT a connection between user1 and user2
+```
+
