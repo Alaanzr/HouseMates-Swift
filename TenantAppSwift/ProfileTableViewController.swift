@@ -7,25 +7,65 @@
 //
 
 import UIKit
+import Foundation
 
 class ProfileTableViewController: UITableViewController {
     
+    let userId = "56772693638b191100fcd2df"
     var properties = [Property]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleProperties()
+        loadSampleProperties(userId)
 
     }
     
-    func loadSampleProperties() {
+    func loadSampleProperties(userId: String) {
         
-        let property1 = Property(id: "12345", post_code: "W8 5JA", street_name: "Lexham Gardens", property_type: "flat", monthly_cost: "£1000")!
         
-        let property2 = Property(id: "123456", post_code: "W10 5JA", street_name: "Cornwall Gardens", property_type: "flat", monthly_cost: "£1500")!
+        let path = "https://housematey.herokuapp.com/users_properties/\(userId)"
+        let url = NSURL(string: path)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            
+            let json = JSON(data: data!)
+            print(json)
+            
+            var count = 0
+            
+            for (_, object) in json {
+                
+                
+                let userPropertyId = object["_id"].stringValue
+                let userPropertyPostCode = object["post_code"].stringValue
+                let userPropertyStreetName = object["street_name"].stringValue
+                let userPropertyPropertyType = object["property_type"].stringValue
+                let userPropertyMonthlyCost = object["monthly_cost"].stringValue
+                
+                let userProperty = Property(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost)!
 
-        properties += [property1, property2]
+                
+                count += 1
+                
+                print(userProperty)
+                self.properties += [userProperty]
+            
+            }
+            
+           
+            
+        }
+        
+        task.resume()
+
+
+        
+//        let property1 = Property(id: "12345", post_code: "W8 5JA", street_name: "Lexham Gardens", property_type: "flat", monthly_cost: "£1000")!
+//        
+//        let property2 = Property(id: "123456", post_code: "W10 5JA", street_name: "Cornwall Gardens", property_type: "flat", monthly_cost: "£1500")!
+//
+//        properties += [property1, property2]
     }
 
     override func didReceiveMemoryWarning() {
