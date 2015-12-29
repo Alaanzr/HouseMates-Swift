@@ -18,10 +18,11 @@ class ProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         
         loadSampleProperties(userId)
-
+        
     }
     
     func loadSampleProperties(userId: String) {
+        
         
         
         let path = "https://housematey.herokuapp.com/users_properties/\(userId)"
@@ -30,42 +31,46 @@ class ProfileTableViewController: UITableViewController {
         let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             let json = JSON(data: data!)
-            print(json)
             
             var count = 0
             
-            for (_, object) in json {
+            
+            for object in json.arrayValue {
                 
                 
                 let userPropertyId = object["_id"].stringValue
                 let userPropertyPostCode = object["post_code"].stringValue
                 let userPropertyStreetName = object["street_name"].stringValue
                 let userPropertyPropertyType = object["property_type"].stringValue
-                let userPropertyMonthlyCost = object["monthly_cost"].stringValue
+                let userPropertyMonthlyCost = object["monthly_cost"].intValue
                 
                 let userProperty = Property(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost)!
 
                 
                 count += 1
                 
-                print(userProperty)
-                self.properties += [userProperty]
-            
+                print(userProperty.id)
+                print(userProperty.post_code)
+                
+                self.properties.append(userProperty)
+                
+                
             }
             
-           
-            
+            dispatch_async(dispatch_get_main_queue(),{
+                self.tableView.reloadData()
+            })
         }
         
         task.resume()
 
-
-        
-//        let property1 = Property(id: "12345", post_code: "W8 5JA", street_name: "Lexham Gardens", property_type: "flat", monthly_cost: "£1000")!
 //        
-//        let property2 = Property(id: "123456", post_code: "W10 5JA", street_name: "Cornwall Gardens", property_type: "flat", monthly_cost: "£1500")!
+//        let property1 = Property(id: "12345", post_code: "W8 5JA", street_name: "Lexham Gardens", property_type: "flat", monthly_cost: 1000)!
+//        
+//        let property2 = Property(id: "123456", post_code: "W10 5JA", street_name: "Cornwall Gardens", property_type: "flat", monthly_cost: 1500)!
 //
-//        properties += [property1, property2]
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,7 +102,7 @@ class ProfileTableViewController: UITableViewController {
         cell.propertytypeLabel.text = property.property_type
         cell.postcodeLabel.text = property.post_code
         cell.streetnameLabel.text = property.street_name
-        cell.monthlycostLabel.text = property.monthly_cost
+        cell.monthlycostLabel.text = String(property.monthly_cost)
 
         return cell
     }

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 //
 //            editService().editUser()
 //            editService().editProperty()
-            getService().getUser()
+//            getService().getUser()
 //            deleteService().deleteUser()
         
 

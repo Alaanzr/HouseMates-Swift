@@ -17,11 +17,11 @@ class Property {
     var post_code: String
     var street_name: String
     var property_type: String
-    var monthly_cost: String
+    var monthly_cost: Int
     
     // MARK: Initialization
     
-    init?(id: String, post_code: String, street_name: String, property_type: String, monthly_cost: String) {
+    init?(id: String, post_code: String, street_name: String, property_type: String, monthly_cost: Int) {
         // Initialize stored properties.
         self.id = id
         self.post_code = post_code
