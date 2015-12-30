@@ -17,6 +17,10 @@ class ProfileTableViewController: UITableViewController {
     
     // MARK: User information
     
+    @IBOutlet weak var firstnameLabel: UILabel!
+    
+    @IBOutlet weak var lastnameLabel: UILabel!
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var userPicture: UIImageView!
@@ -43,13 +47,16 @@ class ProfileTableViewController: UITableViewController {
                 
                 let userId = json["_id"].stringValue
                 let userUserName = json["username"].stringValue
-                let userFirstName = json["firstname"].stringValue
-                let userLastName = json["lastname"].stringValue
+                let userFirstName = json["firstName"].stringValue
+                let userLastName = json["lastName"].stringValue
                 
             let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName)!
             
             
             dispatch_async(dispatch_get_main_queue(),{
+                
+                self.firstnameLabel.text = userDetails.firstname
+                self.lastnameLabel.text = userDetails.lastname
                 self.usernameLabel.text = userDetails.username
                 self.userPicture.image = userDetails.photo
             })
@@ -136,8 +143,8 @@ class ProfileTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, viewForHeaderInSection  section: Int) -> UIView?
     {
         self.lbl_header.frame = CGRectMake(20, 20, self.view.frame.size.width, 150)
-        self.lbl_header.text = "Your tenant history"
-        self.lbl_header.backgroundColor = UIColor.grayColor()
+        self.lbl_header.text = "My rental history"
+        self.lbl_header.backgroundColor = UIColor.lightGrayColor()
         self.lbl_header.textColor = UIColor.whiteColor()
         self.lbl_header.textAlignment = NSTextAlignment.Center
         return self.lbl_header
