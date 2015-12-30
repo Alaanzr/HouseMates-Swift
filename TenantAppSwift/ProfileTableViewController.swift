@@ -13,15 +13,55 @@ class ProfileTableViewController: UITableViewController {
     
     let userId = "56772693638b191100fcd2df"
     var properties = [Property]()
+    var lbl_header = UILabel()
+    
+    // MARK: User information
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var userPicture: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleProperties(userId)
+        loadSampleUserProperties(userId)
+        loadSampleUserDetails(userId)
+    }
+    
+    func loadSampleUserDetails(userId: String) {
+        
+        
+        
+        let path = "https://housematey.herokuapp.com/users/\(userId)"
+        let url = NSURL(string: path)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            
+            let json = JSON(data: data!)
+                
+                
+                let userId = json["_id"].stringValue
+                let userUserName = json["username"].stringValue
+                let userFirstName = json["firstname"].stringValue
+                let userLastName = json["lastname"].stringValue
+                
+            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName)!
+            
+            
+            dispatch_async(dispatch_get_main_queue(),{
+                self.usernameLabel.text = userDetails.username
+                self.userPicture.image = userDetails.photo
+            })
+        }
+        
+        task.resume()
+        
         
     }
     
-    func loadSampleProperties(userId: String) {
+    
+    func loadSampleUserProperties(userId: String) {
         
         
         
@@ -31,8 +71,6 @@ class ProfileTableViewController: UITableViewController {
         let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             let json = JSON(data: data!)
-            
-            var count = 0
             
             
             for object in json.arrayValue {
@@ -45,12 +83,6 @@ class ProfileTableViewController: UITableViewController {
                 let userPropertyMonthlyCost = object["monthly_cost"].intValue
                 
                 let userProperty = Property(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost)!
-
-                
-                count += 1
-                
-                print(userProperty.id)
-                print(userProperty.post_code)
                 
                 self.properties.append(userProperty)
                 
@@ -63,12 +95,6 @@ class ProfileTableViewController: UITableViewController {
         }
         
         task.resume()
-
-//        
-//        let property1 = Property(id: "12345", post_code: "W8 5JA", street_name: "Lexham Gardens", property_type: "flat", monthly_cost: 1000)!
-//        
-//        let property2 = Property(id: "123456", post_code: "W10 5JA", street_name: "Cornwall Gardens", property_type: "flat", monthly_cost: 1500)!
-//
         
         
     }
@@ -107,50 +133,16 @@ class ProfileTableViewController: UITableViewController {
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, viewForHeaderInSection  section: Int) -> UIView?
+    {
+        self.lbl_header.frame = CGRectMake(20, 20, self.view.frame.size.width, 150)
+        self.lbl_header.text = "Your tenant history"
+        self.lbl_header.backgroundColor = UIColor.grayColor()
+        self.lbl_header.textColor = UIColor.whiteColor()
+        self.lbl_header.textAlignment = NSTextAlignment.Center
+        return self.lbl_header
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }
