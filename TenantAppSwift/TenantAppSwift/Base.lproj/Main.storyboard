@@ -58,7 +58,7 @@
                     <connections>
                         <outlet property="passwordSignIn" destination="rMD-fL-mXy" id="msA-D7-zqH"/>
                         <outlet property="usernameSignIn" destination="2Uf-PV-iiX" id="35U-tC-fAn"/>
-                        <segue destination="19S-vw-EcA" kind="modal" identifier="SignInComplete" id="fE2-qc-kmw"/>
+                        <segue destination="THd-EL-qcs" kind="modal" identifier="SignInComplete" id="fE2-qc-kmw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="W5E-WP-O3R">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="270"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="q6J-In-MG9">
@@ -144,7 +144,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="70" id="iDQ-yF-F1G" customClass="ProfileTableViewCell" customModule="TenantAppSwift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="298" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="362" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iDQ-yF-F1G" id="Pu8-gF-9rK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -200,6 +200,7 @@
                             <outlet property="delegate" destination="19S-vw-EcA" id="Nuc-Zb-KAT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="LeG-Xp-WA4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="firstnameLabel" destination="TYf-wF-Sbi" id="ysC-KM-cnz"/>
@@ -210,7 +211,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOg-sC-KUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="342"/>
+            <point key="canvasLocation" x="1621" y="342"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="iqE-XV-Plx">
@@ -304,6 +305,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbB-pW-DGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="176" y="342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w8a-1Y-8X4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="THd-EL-qcs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xSP-O7-Fnm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="19S-vw-EcA" kind="relationship" relationship="rootViewController" id="jWD-NN-TSf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmM-kC-8hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="342"/>
         </scene>
     </scenes>
 </document>
