@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NSURLConnectionDataDelegate {
 
     // Sign In text field outlets
     
@@ -21,7 +22,6 @@ class ViewController: UIViewController {
             super.viewDidLoad()
 //            createService().createUser()
 //            createService().createProperty()
-//
 //            editService().editUser()
 //            editService().editProperty()
 //            getService().getUser()
@@ -44,6 +44,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func signin(sender: UIButton) {
+        
+        
         print("userName: \(usernameSignIn.text!)")
         print("password: \(passwordSignIn.text!)")
         
@@ -71,9 +73,9 @@ class ViewController: UIViewController {
         session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error:NSError?) -> Void in
             // Make sure we get an OK response
             guard let response = response as? NSHTTPURLResponse where
-            response.statusCode == 200 else {
-                print("Not a 200 response")
-                return
+                response.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
             }
             
             // Read the JSON
@@ -97,8 +99,10 @@ extension NSMutableURLRequest {
         let base64 = data.base64EncodedStringWithOptions([])
         setValue("Basic \(base64)", forHTTPHeaderField: "Authorization")
         return true
+        
+//        self.performSegueWithIdentifier("SignInComplete", sender: self)
+        
+        
     }
 }
-
-
 
