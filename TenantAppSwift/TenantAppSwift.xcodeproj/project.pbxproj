@@ -23,6 +23,8 @@
 		CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */; };
 		CA70F7D01C32F512005692F2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA70F7CF1C32F512005692F2 /* Media.xcassets */; };
 		CA70F7D21C32F667005692F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7D11C32F667005692F2 /* User.swift */; };
+		CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */; };
+		CA84D9F81C380E8000798AD8 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9F71C380E8000798AD8 /* LoggedUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = ../ProfileTableViewController.swift; sourceTree = "<group>"; };
 		CA70F7CF1C32F512005692F2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		CA70F7D11C32F667005692F2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		CA84D9F71C380E8000798AD8 /* LoggedUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +130,10 @@
 				499EC51A1C28802800D86BD4 /* editService.swift */,
 				499EC5181C2875B400D86BD4 /* deleteService.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
+				CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */,
 				CA70F7CB1C31852D005692F2 /* Property.swift */,
 				CA70F7C31C2EAF75005692F2 /* SignupViewController.swift */,
+				CA84D9F71C380E8000798AD8 /* LoggedUser.swift */,
 				498A473D1C257367008DCE8F /* SwiftyJSON.swift */,
 				CA70F71B1C22D1B6005692F2 /* Info.plist */,
 			);
@@ -290,8 +296,10 @@
 				494E6BC01C282CF4004F685A /* getService.swift in Sources */,
 				499EC5151C28587100D86BD4 /* createService.swift in Sources */,
 				499EC5191C2875B400D86BD4 /* deleteService.swift in Sources */,
+				CA84D9F81C380E8000798AD8 /* LoggedUser.swift in Sources */,
 				CA70F7D21C32F667005692F2 /* User.swift in Sources */,
 				499EC51B1C28802800D86BD4 /* editService.swift in Sources */,
+				CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */,
 				CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
 			);

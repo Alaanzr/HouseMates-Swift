@@ -281,11 +281,46 @@
                         <outlet property="lastnameSignUp" destination="8IK-UR-ZgV" id="THh-YI-pZg"/>
                         <outlet property="passwordSignUp" destination="562-U3-fR1" id="wOF-A1-4tz"/>
                         <outlet property="usernameSignUp" destination="r37-yN-OPt" id="goC-Qd-0Ob"/>
+                        <segue destination="T7v-f6-ScX" kind="modal" identifier="SignUpComplete" id="RID-gG-SbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnh-84-Na7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547" y="921"/>
+            <point key="canvasLocation" x="668" y="935"/>
+        </scene>
+        <!--New Profile View Controller-->
+        <scene sceneID="gQ7-1E-SaZ">
+            <objects>
+                <viewController id="T7v-f6-ScX" customClass="NewProfileViewController" customModule="TenantAppSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1n6-7s-W7m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your tenant profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yVY-GW-YPP">
+                                <rect key="frame" x="53" y="46" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3rx-Fa-Ygs">
+                                <rect key="frame" x="103" y="115" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="loggedUserName" destination="3rx-Fa-Ygs" id="mrj-DW-fEH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CX-Dr-UI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="935"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XVC-VW-df8">
