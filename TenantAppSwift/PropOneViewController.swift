@@ -47,12 +47,115 @@ class PropOneViewController: UIViewController {
     
     
     @IBAction func savePropOne(sender: UIButton) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        let locationarea:NSString = locationArea.text!
+        let postcode:NSString = postCode.text!
+        let streetname:NSString = streetName.text!
+        let propertytype:NSString = propertyType.text!
+        let contractstart:NSDate = dateFormatter.dateFromString(contractStart.text!)!
+        let contractend:NSDate = dateFormatter.dateFromString(contractEnd.text!)!
+        let landlord:NSString = landLord.text!
+        let landlordcontact:NSString = landlordContact.text!
+        let numbermate: Int? = Int(numberFlatMate.text!)
+        let proprent: Int? = Int(rent.text!)
+        let propdeposit: Int? = Int(deposit.text!)
+        
+        
+        let session = NSURLSession.sharedSession()
+        let newPropertyPost: NSDictionary = ["location_area": locationarea,"post_code":postcode,"street_name":streetname,"landlord_name":landlord,"landlord_contact_details":landlordcontact,"contract_start": contractstart,"contract_end": contractend,"property_type":propertytype,"number_of_flatmates":numbermate!,"monthly_cost":proprent!,"deposit_amount":propdeposit!,"inclusive":false]
+        let path: String = "https://housematey.herokuapp.com/properties"
+        let url = NSMutableURLRequest(URL: NSURL(string: path)!)
+        url.HTTPMethod = "POST"
+        
+        // set new post as HTTPBody for request
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        do {
+            url.HTTPBody = try NSJSONSerialization.dataWithJSONObject(newPropertyPost, options: NSJSONWritingOptions())
+            print(newPropertyPost)
+            
+            
+        } catch {
+            print("bad things happened")
+        }
+        
+        // Make the POST call and handle it in a completion handler
+        let task = session.dataTaskWithRequest(url, completionHandler: { ( data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            
+            // Make sure we get an OK response
+            guard let realResponse = response as? NSHTTPURLResponse where
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
+            }
+            
+            // Read the JSON
+            if let postString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+                // Print what we got from the call
+                print("POST: " + postString)
+                
+            }
+            
+            let post: NSDictionary
+            
+            do { post = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSDictionary
+                
+                dispatch_async(dispatch_get_main_queue(),{
+                    let propertyId = post["_id"] as! String
+                    self.assignNewProperty(propertyId)
+                })
+            } catch {
+                print("error parsing response from post")
+            }
+        })
+        task.resume()
         
     }
     
     
     @IBAction func submitProfile(sender: UIButton) {
         
+    }
+    
+    func assignNewProperty(propertyId: String) {
+        
+        let session = NSURLSession.sharedSession()
+        let newPropertyPut: NSDictionary = ["properties": [propertyId]]
+        let path: String = "https://housematey.herokuapp.com/users/\(loggedUser.id)"
+        let url = NSMutableURLRequest(URL: NSURL(string: path)!)
+        url.HTTPMethod = "PUT"
+        
+        // set new post as HTTPBody for request
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        do {
+            url.HTTPBody = try NSJSONSerialization.dataWithJSONObject(newPropertyPut, options: NSJSONWritingOptions())
+            print(newPropertyPut)
+            
+        } catch {
+            print("bad things happened")
+        }
+        
+        // Make the POST call and handle it in a completion handler
+        let task = session.dataTaskWithRequest(url, completionHandler: { ( data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            
+            // Make sure we get an OK response
+            guard let realResponse = response as? NSHTTPURLResponse where
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
+            }
+            
+            // Read the JSON
+            if let putString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+                // Print what we got from the call
+                print("PUT: " + putString)
+                
+            }
+            
+        })
+        task.resume()
     }
     
 }
