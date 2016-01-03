@@ -27,6 +27,8 @@
 		CA84D9F81C380E8000798AD8 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9F71C380E8000798AD8 /* LoggedUser.swift */; };
 		CA84D9FC1C390E5000798AD8 /* PropOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */; };
 		CA84D9FE1C396BBA00798AD8 /* PropTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9FD1C396BBA00798AD8 /* PropTwoViewController.swift */; };
+		CA84DA001C397F7C00798AD8 /* UserProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */; };
+		CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA011C39802400798AD8 /* loggedUserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CA84D9F71C380E8000798AD8 /* LoggedUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
 		CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropOneViewController.swift; path = ../PropOneViewController.swift; sourceTree = "<group>"; };
 		CA84D9FD1C396BBA00798AD8 /* PropTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropTwoViewController.swift; sourceTree = "<group>"; };
+		CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProperties.swift; sourceTree = "<group>"; };
+		CA84DA011C39802400798AD8 /* loggedUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loggedUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
 				CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
+				CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */,
+				CA84DA011C39802400798AD8 /* loggedUserService.swift */,
 				CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */,
 				CA70F7CF1C32F512005692F2 /* Media.xcassets */,
 				CA70F7D11C32F667005692F2 /* User.swift */,
@@ -305,8 +311,10 @@
 				499EC5151C28587100D86BD4 /* createService.swift in Sources */,
 				499EC5191C2875B400D86BD4 /* deleteService.swift in Sources */,
 				CA84D9F81C380E8000798AD8 /* LoggedUser.swift in Sources */,
+				CA84DA001C397F7C00798AD8 /* UserProperties.swift in Sources */,
 				CA70F7D21C32F667005692F2 /* User.swift in Sources */,
 				499EC51B1C28802800D86BD4 /* editService.swift in Sources */,
+				CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */,
 				CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */,
 				CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,

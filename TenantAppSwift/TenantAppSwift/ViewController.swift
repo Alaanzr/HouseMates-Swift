@@ -85,6 +85,15 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
                 //                self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
             }
             
+            dispatch_async(dispatch_get_main_queue(),{
+                
+                let loggedUser = LoggedUser.sharedInstance
+                
+//                    loggedUser.id =   jsonString["_id"].stringValue
+                self.performSegueWithIdentifier("SignInComplete", sender: self)
+                    
+            })
+            
         }).resume()
         
     }

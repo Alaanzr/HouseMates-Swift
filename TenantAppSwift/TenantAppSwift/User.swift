@@ -18,15 +18,17 @@ class User {
     var firstname: String
     var lastname: String
     var photo = UIImage(named: "profile1")!
+    var targetArea: String
     
     // MARK: Initialization
     
-    init?(id: String, username: String, firstname: String, lastname: String) {
+    init?(id: String, username: String, firstname: String, lastname: String, targetArea: String) {
         // Initialize stored properties.
         self.id = id
         self.username = username
         self.firstname = firstname
         self.lastname = lastname
+        self.targetArea = targetArea
         
     }
     

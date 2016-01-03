@@ -86,7 +86,7 @@ class SignupViewController: UIViewController {
                     }
                     
                     dispatch_async(dispatch_get_main_queue(),{
-                        self.setLoggedUserId(JSON(data: data!))
+                        loggedUserService().setLoggedUserId(JSON(data: data!))
                         self.performSegueWithIdentifier("SignUpComplete", sender: self)
                     })
                     
@@ -96,17 +96,17 @@ class SignupViewController: UIViewController {
         }
     }
     
-    func setLoggedUserId(json: JSON) {
-        
-        let loggedUser = LoggedUser.sharedInstance
-        
-        loggedUser.id = json["_id"].stringValue
-        loggedUser.username = json["username"].stringValue
-        loggedUser.firstname = json["firstName"].stringValue
-        loggedUser.lastname = json["lastName"].stringValue
-        loggedUser.email = json["email"].stringValue
-        
-        
-    }
+//    func setLoggedUserId(json: JSON) {
+//        
+//        let loggedUser = LoggedUser.sharedInstance
+//        
+//        loggedUser.id = json["_id"].stringValue
+//        loggedUser.username = json["username"].stringValue
+//        loggedUser.firstname = json["firstName"].stringValue
+//        loggedUser.lastname = json["lastName"].stringValue
+//        loggedUser.email = json["email"].stringValue
+//        
+//        
+//    }
 
 }

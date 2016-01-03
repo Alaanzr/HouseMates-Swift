@@ -205,6 +205,7 @@
                     <connections>
                         <outlet property="firstnameLabel" destination="TYf-wF-Sbi" id="ysC-KM-cnz"/>
                         <outlet property="lastnameLabel" destination="amX-qn-Fh5" id="9HW-Dj-yBo"/>
+                        <outlet property="targetareaLabel" destination="Yjy-Sh-UNC" id="WKW-Ox-yWm"/>
                         <outlet property="userPicture" destination="q6J-In-MG9" id="ciF-zb-yYa"/>
                         <outlet property="usernameLabel" destination="yLI-IN-fp0" id="P4R-0e-a8U"/>
                     </connections>

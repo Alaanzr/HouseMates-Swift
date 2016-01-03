@@ -9,6 +9,8 @@
 import UIKit
 
 class PropTwoViewController: UIViewController {
+    
+    let userProperties = UserProperties.sharedInstance
 
     let loggedUser = LoggedUser.sharedInstance
     
@@ -118,7 +120,10 @@ class PropTwoViewController: UIViewController {
                 
                 dispatch_async(dispatch_get_main_queue(),{
                     let propertyId = post["_id"] as! String
-                    self.assignNewProperty(propertyId)
+                    
+                    self.userProperties.props.append(propertyId)
+                    
+                    self.assignNewProperty(self.userProperties.props)
                     self.performSegueWithIdentifier(segueIdentifier, sender: self)
                 })
             } catch {
@@ -129,10 +134,10 @@ class PropTwoViewController: UIViewController {
         
     }
     
-    func assignNewProperty(propertyId: String) {
+    func assignNewProperty(properties: NSArray) {
         
         let session = NSURLSession.sharedSession()
-        let newPropertyPut: NSDictionary = ["properties": [propertyId]]
+        let newPropertyPut: NSDictionary = ["properties": properties]
         let path: String = "https://housematey.herokuapp.com/users/\(loggedUser.id)"
         let url = NSMutableURLRequest(URL: NSURL(string: path)!)
         url.HTTPMethod = "PUT"

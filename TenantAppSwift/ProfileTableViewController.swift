@@ -19,12 +19,10 @@ class ProfileTableViewController: UITableViewController {
     // MARK: User information
     
     @IBOutlet weak var firstnameLabel: UILabel!
-    
     @IBOutlet weak var lastnameLabel: UILabel!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var userPicture: UIImageView!
+    @IBOutlet weak var targetareaLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -50,8 +48,9 @@ class ProfileTableViewController: UITableViewController {
                 let userUserName = json["username"].stringValue
                 let userFirstName = json["firstName"].stringValue
                 let userLastName = json["lastName"].stringValue
+                let userTargetArea = json["currentArea"].stringValue
                 
-            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName)!
+            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName,targetArea: userTargetArea)!
             
             
             dispatch_async(dispatch_get_main_queue(),{
@@ -60,6 +59,7 @@ class ProfileTableViewController: UITableViewController {
                 self.lastnameLabel.text = userDetails.lastname
                 self.usernameLabel.text = userDetails.username
                 self.userPicture.image = userDetails.photo
+                self.targetareaLabel.text = userDetails.targetArea
             })
         }
         
