@@ -11,7 +11,8 @@ import Foundation
 
 class ProfileTableViewController: UITableViewController {
     
-    let userId = "56772693638b191100fcd2df"
+    let loggedUser = LoggedUser.sharedInstance
+    
     var properties = [Property]()
     var lbl_header = UILabel()
     
@@ -29,8 +30,8 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleUserProperties(userId)
-        loadSampleUserDetails(userId)
+        loadSampleUserProperties(loggedUser.id)
+        loadSampleUserDetails(loggedUser.id)
     }
     
     func loadSampleUserDetails(userId: String) {
