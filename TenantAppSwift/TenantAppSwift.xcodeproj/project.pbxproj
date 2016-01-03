@@ -25,6 +25,7 @@
 		CA70F7D21C32F667005692F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70F7D11C32F667005692F2 /* User.swift */; };
 		CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */; };
 		CA84D9F81C380E8000798AD8 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9F71C380E8000798AD8 /* LoggedUser.swift */; };
+		CA84D9FC1C390E5000798AD8 /* PropOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		CA70F7D11C32F667005692F2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		CA84D9F71C380E8000798AD8 /* LoggedUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
+		CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropOneViewController.swift; path = ../PropOneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
+				CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
 				CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */,
 				CA70F7CF1C32F512005692F2 /* Media.xcassets */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA84D9FC1C390E5000798AD8 /* PropOneViewController.swift in Sources */,
 				CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */,
 				CA70F7CC1C31852D005692F2 /* Property.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
