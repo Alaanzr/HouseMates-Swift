@@ -104,6 +104,7 @@ class SignupViewController: UIViewController {
         loggedUser.username = json["username"].stringValue
         loggedUser.firstname = json["firstName"].stringValue
         loggedUser.lastname = json["lastName"].stringValue
+        loggedUser.email = json["email"].stringValue
         
         
     }

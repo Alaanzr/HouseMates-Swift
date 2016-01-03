@@ -15,6 +15,7 @@ public class LoggedUser {
     public var username: String = ""
     public var firstname: String = ""
     public var lastname: String = ""
+    public var email: String = ""
     
     private init() {}
 }
