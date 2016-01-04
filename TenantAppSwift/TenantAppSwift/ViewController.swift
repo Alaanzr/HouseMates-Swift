@@ -9,13 +9,14 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController, NSURLConnectionDataDelegate {
+class ViewController: UIViewController {
 
     // Sign In text field outlets
     
     @IBOutlet weak var usernameSignIn: UITextField!
     
     @IBOutlet weak var passwordSignIn: UITextField!
+
     
     
         override func viewDidLoad() {
@@ -45,6 +46,8 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     
     @IBAction func signin(sender: UIButton) {
         
+        self.usernameSignIn.text = "EzzyElliott"
+        self.passwordSignIn.text = "EzzyElliott"
         
         print("userName: \(usernameSignIn.text!)")
         print("password: \(passwordSignIn.text!)")
@@ -71,6 +74,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         
         // Make the GET call and handle it in a completion handler
         session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error:NSError?) -> Void in
+            print("made request")
             // Make sure we get an OK response
             guard let response = response as? NSHTTPURLResponse where
                 response.statusCode == 200 else {
@@ -79,17 +83,19 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             }
             
             // Read the JSON
-            if let jsonString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
-                // Print what we got from the call
-                print("GET: " + jsonString)
-                //                self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
-            }
+//            if let jsonString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+//                // Print what we got from the call
+//                print("GET: " + jsonString)
+//                        }
+            
+            let json = JSON(data: data!)
+            
+            print("GET: \(json)")
             
             dispatch_async(dispatch_get_main_queue(),{
                 
-                let loggedUser = LoggedUser.sharedInstance
+                loggedUserService().setLoggedUserId(json)
                 
-//                    loggedUser.id =   jsonString["_id"].stringValue
                 self.performSegueWithIdentifier("SignInComplete", sender: self)
                     
             })
