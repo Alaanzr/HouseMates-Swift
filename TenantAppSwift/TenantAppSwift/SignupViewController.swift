@@ -77,15 +77,36 @@ class SignupViewController: UIViewController {
                     }
                     
                     // Read the JSON
-                    if let postString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+
+                    if let json = JSON(data: data!) as? JSON {
                         // Print what we got from the call
-                        print("POST: " + postString)
+                        print("POST: \(json)")
                         //                self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
+//                    NSUserDefaults.standardUserDefaults().setObject(json["_id"].stringValue, forKey: "LoggedInUserId")
                     }
+                    
+                    dispatch_async(dispatch_get_main_queue(),{
+                        loggedUserService().setLoggedUserId(JSON(data: data!))
+                        self.performSegueWithIdentifier("SignUpComplete", sender: self)
+                    })
+                    
                     
                 }).resume()
             }
         }
     }
+    
+//    func setLoggedUserId(json: JSON) {
+//        
+//        let loggedUser = LoggedUser.sharedInstance
+//        
+//        loggedUser.id = json["_id"].stringValue
+//        loggedUser.username = json["username"].stringValue
+//        loggedUser.firstname = json["firstName"].stringValue
+//        loggedUser.lastname = json["lastName"].stringValue
+//        loggedUser.email = json["email"].stringValue
+//        
+//        
+//    }
 
 }

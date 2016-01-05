@@ -11,26 +11,25 @@ import Foundation
 
 class ProfileTableViewController: UITableViewController {
     
-    let userId = "56772693638b191100fcd2df"
+    let loggedUser = LoggedUser.sharedInstance
+    
     var properties = [Property]()
     var lbl_header = UILabel()
     
     // MARK: User information
     
     @IBOutlet weak var firstnameLabel: UILabel!
-    
     @IBOutlet weak var lastnameLabel: UILabel!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var userPicture: UIImageView!
-    
+    @IBOutlet weak var targetareaLabel: UILabel!
+    @IBOutlet weak var targetrentLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleUserProperties(userId)
-        loadSampleUserDetails(userId)
+        loadSampleUserProperties(loggedUser.id)
+        loadSampleUserDetails(loggedUser.id)
     }
     
     func loadSampleUserDetails(userId: String) {
@@ -49,8 +48,10 @@ class ProfileTableViewController: UITableViewController {
                 let userUserName = json["username"].stringValue
                 let userFirstName = json["firstName"].stringValue
                 let userLastName = json["lastName"].stringValue
+                let userTargetArea = json["currentArea"].stringValue
+                let userTargetRent = json["currentRentBand"].intValue
                 
-            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName)!
+            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName,targetArea: userTargetArea, targetRent: userTargetRent)!
             
             
             dispatch_async(dispatch_get_main_queue(),{
@@ -59,6 +60,8 @@ class ProfileTableViewController: UITableViewController {
                 self.lastnameLabel.text = userDetails.lastname
                 self.usernameLabel.text = userDetails.username
                 self.userPicture.image = userDetails.photo
+                self.targetareaLabel.text = userDetails.targetArea
+                self.targetrentLabel.text = String(userDetails.targetRent)
             })
         }
         
