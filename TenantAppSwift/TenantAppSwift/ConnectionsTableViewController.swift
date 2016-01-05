@@ -17,6 +17,8 @@ class ConnectionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    loadSampleUserProperties(loggedUser.id)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,16 +42,18 @@ class ConnectionsTableViewController: UITableViewController {
             for object in json.arrayValue {
                 
                 
-//                let userPropertyId = object["_id"].stringValue
-//                let userPropertyPostCode = object["post_code"].stringValue
-//                let userPropertyStreetName = object["street_name"].stringValue
-//                let userPropertyPropertyType = object["property_type"].stringValue
-//                let userPropertyMonthlyCost = object["monthly_cost"].intValue
-//                
-//                let userConnection = User(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost)!
+                let userConId = object["_id"].stringValue
+                let userConUsername = object["username"].stringValue
+                let userConFirstname = object["firstName"].stringValue
+                let userConLastname = object["lastName"].stringValue
+                let userConTargetArea = object["currentArea"].stringValue
+                let userConTargetRent = object["currentRentBand"].intValue
                 
-//                self.connections.append(userConnection)
+                let userConnection = User(id: userConId, username: userConUsername, firstname: userConFirstname, lastname: userConLastname,targetArea: userConTargetArea, targetRent: userConTargetRent)!
+            
                 
+                self.connections.append(userConnection)
+                print(self.connections[0].targetArea)
                 
             }
             
@@ -82,8 +86,8 @@ class ConnectionsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "ConnectionsTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ConnectionsTableViewCell
+        let NewcellIdentifier = "ConnectionsTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(NewcellIdentifier, forIndexPath: indexPath) as! ConnectionsTableViewCell
 
         let connection = connections[indexPath.row]
         

@@ -46,8 +46,8 @@ class ViewController: UIViewController {
     
     @IBAction func signin(sender: UIButton) {
         
-        self.usernameSignIn.text = "test"
-        self.passwordSignIn.text = "testtest"
+        self.usernameSignIn.text = "ezzyelliott"
+        self.passwordSignIn.text = "ezzyelliott"
         
         print("userName: \(usernameSignIn.text!)")
         print("password: \(passwordSignIn.text!)")
