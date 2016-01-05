@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="342"/>
+            <point key="canvasLocation" x="821.5" y="341.5"/>
         </scene>
         <!--Housemates-->
         <scene sceneID="pQ4-m4-z2O">
@@ -157,7 +157,11 @@
                             <rect key="frame" x="0.0" y="434" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Item" id="MwB-Dt-gVI"/>
+                                <barButtonItem title="Connections" id="MwB-Dt-gVI">
+                                    <connections>
+                                        <segue destination="ZMg-Nd-hAh" kind="push" id="uUe-C0-MfH"/>
+                                    </connections>
+                                </barButtonItem>
                             </items>
                         </toolbar>
                         <prototypes>
