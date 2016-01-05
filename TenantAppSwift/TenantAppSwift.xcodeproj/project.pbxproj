@@ -29,6 +29,8 @@
 		CA84D9FE1C396BBA00798AD8 /* PropTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9FD1C396BBA00798AD8 /* PropTwoViewController.swift */; };
 		CA84DA001C397F7C00798AD8 /* UserProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */; };
 		CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA011C39802400798AD8 /* loggedUserService.swift */; };
+		CA84DA061C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */; };
+		CA84DA081C3AFDAB00798AD8 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		CA84D9FD1C396BBA00798AD8 /* PropTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropTwoViewController.swift; sourceTree = "<group>"; };
 		CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProperties.swift; sourceTree = "<group>"; };
 		CA84DA011C39802400798AD8 /* loggedUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loggedUserService.swift; sourceTree = "<group>"; };
+		CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewCell.swift; sourceTree = "<group>"; };
+		CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,15 +136,17 @@
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
 				CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */,
 				CA84DA011C39802400798AD8 /* loggedUserService.swift */,
-				CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */,
 				CA70F7CF1C32F512005692F2 /* Media.xcassets */,
 				CA70F7D11C32F667005692F2 /* User.swift */,
+				CA70F7CD1C31883E005692F2 /* ProfileTableViewController.swift */,
+				CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */,
 				CA70F7C71C317D4E005692F2 /* ProfileTableViewCell.swift */,
 				494E6BBF1C282CF4004F685A /* getService.swift */,
 				499EC5141C28587100D86BD4 /* createService.swift */,
 				499EC51A1C28802800D86BD4 /* editService.swift */,
 				499EC5181C2875B400D86BD4 /* deleteService.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
+				CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */,
 				CA84D9FD1C396BBA00798AD8 /* PropTwoViewController.swift */,
 				CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */,
 				CA70F7CB1C31852D005692F2 /* Property.swift */,
@@ -312,10 +318,12 @@
 				499EC5191C2875B400D86BD4 /* deleteService.swift in Sources */,
 				CA84D9F81C380E8000798AD8 /* LoggedUser.swift in Sources */,
 				CA84DA001C397F7C00798AD8 /* UserProperties.swift in Sources */,
+				CA84DA061C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift in Sources */,
 				CA70F7D21C32F667005692F2 /* User.swift in Sources */,
 				499EC51B1C28802800D86BD4 /* editService.swift in Sources */,
 				CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */,
 				CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */,
+				CA84DA081C3AFDAB00798AD8 /* ConnectionsTableViewController.swift in Sources */,
 				CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
 			);

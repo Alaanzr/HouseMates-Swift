@@ -23,7 +23,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var userPicture: UIImageView!
     @IBOutlet weak var targetareaLabel: UILabel!
-    
+    @IBOutlet weak var targetrentLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,9 @@ class ProfileTableViewController: UITableViewController {
                 let userFirstName = json["firstName"].stringValue
                 let userLastName = json["lastName"].stringValue
                 let userTargetArea = json["currentArea"].stringValue
+                let userTargetRent = json["currentRentBand"].intValue
                 
-            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName,targetArea: userTargetArea)!
+            let userDetails = User(id: userId, username: userUserName, firstname: userFirstName, lastname: userLastName,targetArea: userTargetArea, targetRent: userTargetRent)!
             
             
             dispatch_async(dispatch_get_main_queue(),{
@@ -60,6 +61,7 @@ class ProfileTableViewController: UITableViewController {
                 self.usernameLabel.text = userDetails.username
                 self.userPicture.image = userDetails.photo
                 self.targetareaLabel.text = userDetails.targetArea
+                self.targetrentLabel.text = String(userDetails.targetRent)
             })
         }
         

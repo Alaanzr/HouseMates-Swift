@@ -53,7 +53,7 @@ class createService {
 
     func createProperty() {
         
-        let postEndpoint: String = "https://housematey.herokuapp.com/properties"
+        let postEndpoint: String = "https://housematey.herokuapp.com/properties_only"
         let url = NSURL(string: postEndpoint)!
         let session = NSURLSession.sharedSession()
         let postParams: NSDictionary = ["post_code":"W8 5JA","street_name":"Gun Road","landlord_name":"Mr Fokker","landlord_contact_details":"555 777 999","property_type":"Flat","number_of_flatmates":5,"monthly_cost":200,"deposit_amount":200,"inclusive":false,"__v":0]
