@@ -225,7 +225,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="T7v-f6-ScX" kind="modal" id="qqK-Hf-0Ys"/>
+                                    <segue destination="T7v-f6-ScX" kind="modal" id="La0-pF-UeB"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -387,14 +387,14 @@
                         <outlet property="lastnameSignUp" destination="8IK-UR-ZgV" id="THh-YI-pZg"/>
                         <outlet property="passwordSignUp" destination="562-U3-fR1" id="wOF-A1-4tz"/>
                         <outlet property="usernameSignUp" destination="r37-yN-OPt" id="goC-Qd-0Ob"/>
-                        <segue destination="T7v-f6-ScX" kind="modal" identifier="SignUpComplete" id="RID-gG-SbY"/>
+                        <segue destination="T7v-f6-ScX" kind="modal" identifier="SignUpComplete" id="lbq-74-Hkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnh-84-Na7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="667.5" y="1172.5"/>
         </scene>
-        <!--New Profile View Controller-->
+        <!--Housemates-->
         <scene sceneID="gQ7-1E-SaZ">
             <objects>
                 <viewController id="T7v-f6-ScX" customClass="NewProfileViewController" customModule="TenantAppSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -557,6 +557,7 @@
                             <constraint firstItem="3rx-Fa-Ygs" firstAttribute="leading" secondItem="5Sf-qN-91v" secondAttribute="leading" id="zWu-WQ-Oi0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Housemates" id="w0m-mC-9tT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loggedEmail" destination="ory-1S-3mK" id="7xS-UY-ujV"/>
@@ -571,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CX-Dr-UI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.5" y="1172.5"/>
+            <point key="canvasLocation" x="1675.5" y="1172.5"/>
         </scene>
         <!--Prop One View Controller-->
         <scene sceneID="x6b-V9-QYI">
@@ -888,7 +889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foM-Nr-Jjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496.5" y="1172.5"/>
+            <point key="canvasLocation" x="2083.5" y="1172.5"/>
         </scene>
         <!--Prop Two View Controller-->
         <scene sceneID="5Nd-hh-bRh">
@@ -1098,7 +1099,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yii-5e-dIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018.5" y="1172.5"/>
+            <point key="canvasLocation" x="2605.5" y="1172.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XVC-VW-df8">
@@ -1139,8 +1140,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gfk-kY-nkF"/>
         <segue reference="jWD-NN-TSf"/>
-        <segue reference="qqK-Hf-0Ys"/>
+        <segue reference="gfk-kY-nkF"/>
+        <segue reference="La0-pF-UeB"/>
     </inferredMetricsTieBreakers>
 </document>
