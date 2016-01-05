@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="W5E-WP-O3R">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                            <rect key="frame" x="0.0" y="64" width="375" height="270"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q6J-In-MG9">
@@ -153,56 +153,16 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="pQK-vk-1zU">
-                            <rect key="frame" x="0.0" y="370" width="375" height="231"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wga-UT-ADQ">
-                                    <rect key="frame" x="39" y="-129" width="540" height="540"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="540" id="K4M-WX-T8r"/>
-                                    </constraints>
-                                    <state key="normal" title="Connections"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS4-5D-Qnc">
-                                    <rect key="frame" x="11" y="202" width="101" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="101" id="gcH-bM-lR1"/>
-                                    </constraints>
-                                    <state key="normal" title="Home"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bz-8e-dTA">
-                                    <rect key="frame" x="132" y="202" width="101" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="101" id="fL7-Bm-rrO"/>
-                                    </constraints>
-                                    <state key="normal" title="Profile"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gc-6P-w4f">
-                                    <rect key="frame" x="259" y="202" width="101" height="30"/>
-                                    <state key="normal" title="Connections"/>
-                                    <connections>
-                                        <segue destination="ZMg-Nd-hAh" kind="modal" id="M7o-Zv-jwV"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="9Gc-6P-w4f" firstAttribute="leading" secondItem="9bz-8e-dTA" secondAttribute="trailing" constant="26" id="HeT-FB-Gb6"/>
-                                <constraint firstItem="9bz-8e-dTA" firstAttribute="leading" secondItem="LS4-5D-Qnc" secondAttribute="trailing" constant="20" id="ItA-PW-hq8"/>
-                                <constraint firstAttribute="trailing" secondItem="9Gc-6P-w4f" secondAttribute="trailing" constant="15" id="LR2-8n-VhC"/>
-                                <constraint firstItem="LS4-5D-Qnc" firstAttribute="baseline" secondItem="9bz-8e-dTA" secondAttribute="baseline" id="X7X-Pz-anL"/>
-                                <constraint firstItem="Wga-UT-ADQ" firstAttribute="leading" secondItem="pQK-vk-1zU" secondAttribute="leading" constant="39" id="ZF0-aP-9Hb"/>
-                                <constraint firstItem="Wga-UT-ADQ" firstAttribute="centerX" secondItem="9Gc-6P-w4f" secondAttribute="centerX" id="jkX-LR-Cd9"/>
-                                <constraint firstItem="9Gc-6P-w4f" firstAttribute="baseline" secondItem="9bz-8e-dTA" secondAttribute="baseline" id="mWb-wA-CHY"/>
-                                <constraint firstItem="Wga-UT-ADQ" firstAttribute="top" secondItem="pQK-vk-1zU" secondAttribute="top" constant="-129" id="oIw-GJ-MPo"/>
-                                <constraint firstAttribute="bottom" secondItem="LS4-5D-Qnc" secondAttribute="bottom" constant="-1" id="q57-JM-zwO"/>
-                                <constraint firstItem="LS4-5D-Qnc" firstAttribute="leading" secondItem="pQK-vk-1zU" secondAttribute="leading" constant="11" id="s0f-RA-riG"/>
-                            </constraints>
-                        </view>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yCc-bO-RFE">
+                            <rect key="frame" x="0.0" y="434" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Item" id="MwB-Dt-gVI"/>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="72" id="iDQ-yF-F1G" customClass="ProfileTableViewCell" customModule="TenantAppSwift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="298" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="362" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iDQ-yF-F1G" id="Pu8-gF-9rK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
@@ -253,6 +213,7 @@
                             <outlet property="delegate" destination="19S-vw-EcA" id="Nuc-Zb-KAT"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Housemates" id="LeG-Xp-WA4">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Xkx-wG-eyd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Fg-4l-Kn3">
@@ -275,6 +236,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="firstnameLabel" destination="TYf-wF-Sbi" id="ysC-KM-cnz"/>
@@ -298,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="RyP-z1-90M" customClass="ConnectionsTableViewCell" customModule="TenantAppSwift" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConnectionsTableViewCell" id="RyP-z1-90M" customClass="ConnectionsTableViewCell" customModule="TenantAppSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RyP-z1-90M" id="1lp-em-tH4">
@@ -1173,8 +1135,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eMQ-yG-xbH"/>
-        <segue reference="RID-gG-SbY"/>
-        <segue reference="6cY-5i-Ksc"/>
+        <segue reference="gfk-kY-nkF"/>
+        <segue reference="jWD-NN-TSf"/>
+        <segue reference="qqK-Hf-0Ys"/>
     </inferredMetricsTieBreakers>
 </document>

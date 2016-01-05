@@ -16,6 +16,8 @@ class ProfileTableViewController: UITableViewController {
     var properties = [Property]()
     var lbl_header = UILabel()
     
+    
+    
     // MARK: User information
     
     @IBOutlet weak var firstnameLabel: UILabel!
@@ -30,7 +32,9 @@ class ProfileTableViewController: UITableViewController {
         
         loadSampleUserProperties(loggedUser.id)
         loadSampleUserDetails(loggedUser.id)
-    }
+            }
+    
+    
     
     func loadSampleUserDetails(userId: String) {
         
@@ -143,16 +147,6 @@ class ProfileTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection  section: Int) -> UIView?
-    {
-        self.lbl_header.frame = CGRectMake(20, 20, self.view.frame.size.width, 150)
-        self.lbl_header.text = "My rental history"
-        self.lbl_header.backgroundColor = UIColor.lightGrayColor()
-        self.lbl_header.textColor = UIColor.whiteColor()
-        self.lbl_header.textAlignment = NSTextAlignment.Center
-        return self.lbl_header
-        
-    }
-    
+   
     
 }
