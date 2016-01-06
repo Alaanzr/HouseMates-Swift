@@ -32,6 +32,8 @@
 		CA84DA061C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */; };
 		CA84DA081C3AFDAB00798AD8 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */; };
 		CA84DA0A1C3D322B00798AD8 /* truncateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA091C3D322B00798AD8 /* truncateService.swift */; };
+		CA84DA0C1C3D50D300798AD8 /* InvitationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA0B1C3D50D300798AD8 /* InvitationsTableViewController.swift */; };
+		CA84DA0E1C3D512400798AD8 /* InvitationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA0D1C3D512300798AD8 /* InvitationsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewCell.swift; sourceTree = "<group>"; };
 		CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		CA84DA091C3D322B00798AD8 /* truncateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = truncateService.swift; sourceTree = "<group>"; };
+		CA84DA0B1C3D50D300798AD8 /* InvitationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationsTableViewController.swift; sourceTree = "<group>"; };
+		CA84DA0D1C3D512300798AD8 /* InvitationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				499EC51A1C28802800D86BD4 /* editService.swift */,
 				499EC5181C2875B400D86BD4 /* deleteService.swift */,
 				CA70F7131C22D1B6005692F2 /* Main.storyboard */,
+				CA84DA0B1C3D50D300798AD8 /* InvitationsTableViewController.swift */,
+				CA84DA0D1C3D512300798AD8 /* InvitationsTableViewCell.swift */,
 				CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */,
 				CA84D9FD1C396BBA00798AD8 /* PropTwoViewController.swift */,
 				CA84D9F51C358F9D00798AD8 /* NewProfileViewController.swift */,
@@ -315,6 +321,7 @@
 				CA70F7CC1C31852D005692F2 /* Property.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
 				CA84DA0A1C3D322B00798AD8 /* truncateService.swift in Sources */,
+				CA84DA0E1C3D512400798AD8 /* InvitationsTableViewCell.swift in Sources */,
 				CA70F7C41C2EAF75005692F2 /* SignupViewController.swift in Sources */,
 				CA70F7C81C317D4E005692F2 /* ProfileTableViewCell.swift in Sources */,
 				494E6BC01C282CF4004F685A /* getService.swift in Sources */,
@@ -325,6 +332,7 @@
 				CA84DA061C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift in Sources */,
 				CA70F7D21C32F667005692F2 /* User.swift in Sources */,
 				499EC51B1C28802800D86BD4 /* editService.swift in Sources */,
+				CA84DA0C1C3D50D300798AD8 /* InvitationsTableViewController.swift in Sources */,
 				CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */,
 				CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */,
 				CA84DA081C3AFDAB00798AD8 /* ConnectionsTableViewController.swift in Sources */,

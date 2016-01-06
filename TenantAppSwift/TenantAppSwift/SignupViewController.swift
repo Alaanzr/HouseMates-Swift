@@ -21,6 +21,10 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+
+        
         
     }
     
@@ -29,6 +33,11 @@ class SignupViewController: UIViewController {
         super.didReceiveMemoryWarning()
      
         
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func signup(sender: UIButton) {

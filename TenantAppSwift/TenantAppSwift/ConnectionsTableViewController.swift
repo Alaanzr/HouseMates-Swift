@@ -19,7 +19,7 @@ class ConnectionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    loadSampleUserProperties(loggedUser.id)
+    loadSampleUserConnections(loggedUser.id)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,7 +28,7 @@ class ConnectionsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    func loadSampleUserProperties(userId: String) {
+    func loadSampleUserConnections(userId: String) {
         
         
         

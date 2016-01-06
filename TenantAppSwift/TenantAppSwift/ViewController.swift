@@ -20,13 +20,9 @@ class ViewController: UIViewController {
     
     
         override func viewDidLoad() {
-            super.viewDidLoad()
-//            createService().createUser()
-//            createService().createProperty()
-//            editService().editUser()
-//            editService().editProperty()
-//            getService().getUser()
-//            deleteService().deleteUser()
+
+            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+            view.addGestureRecognizer(tap)
         
 
         }
@@ -36,7 +32,10 @@ class ViewController: UIViewController {
             // Dispose of any resources that can be recreated.
         }
 
-    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
     
     // Sign In action
@@ -46,8 +45,8 @@ class ViewController: UIViewController {
     
     @IBAction func signin(sender: UIButton) {
         
-        self.usernameSignIn.text = "ezzyelliott"
-        self.passwordSignIn.text = "ezzyelliott"
+//        self.usernameSignIn.text = "ezzyelliott"
+//        self.passwordSignIn.text = "ezzyelliott"
         
         print("userName: \(usernameSignIn.text!)")
         print("password: \(passwordSignIn.text!)")
