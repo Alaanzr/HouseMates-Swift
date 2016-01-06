@@ -64,8 +64,8 @@ class ProfileTableViewController: UITableViewController {
                 self.lastnameLabel.text = userDetails.lastname
                 self.usernameLabel.text = userDetails.username
                 self.userPicture.image = userDetails.photo
-                self.targetareaLabel.text = userDetails.targetArea
-                self.targetrentLabel.text = String(userDetails.targetRent)
+                self.targetareaLabel.text = "Targeted area: " + "\(userDetails.targetArea)"
+                self.targetrentLabel.text = "Targeted rent(£): " + "\(String(userDetails.targetRent))"
             })
         }
         
@@ -95,10 +95,14 @@ class ProfileTableViewController: UITableViewController {
                 let userPropertyStreetName = object["street_name"].stringValue
                 let userPropertyPropertyType = object["property_type"].stringValue
                 let userPropertyMonthlyCost = object["monthly_cost"].intValue
+                let userPropertyStartContract = object["contract_start"].stringValue
+                let userPropertyEndContract = object["contract_end"].stringValue
                 
-                let userProperty = Property(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost)!
+                let userProperty = Property(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost, contract_start: userPropertyStartContract, contract_end: userPropertyEndContract)!
                 
                 self.properties.append(userProperty)
+                print(self.properties[0].contract_start)
+                print(self.properties[0].contract_start)
                 
                 
             }
@@ -142,7 +146,9 @@ class ProfileTableViewController: UITableViewController {
         cell.propertytypeLabel.text = property.property_type
         cell.postcodeLabel.text = property.post_code
         cell.streetnameLabel.text = property.street_name
-        cell.monthlycostLabel.text = String(property.monthly_cost)
+        cell.monthlycostLabel.text = "Rent(£): \(String(property.monthly_cost))"
+        cell.startdateLabel.text = "From: \(property.contract_start.truncate(7,trailing:""))"
+        cell.enddateLabel.text = "To: \(property.contract_end.truncate(7,trailing:""))"
 
         return cell
     }

@@ -26,8 +26,8 @@ class PropTwoViewController: UIViewController {
     @IBOutlet weak var postCode: UITextField!
     @IBOutlet weak var streetName: UITextField!
     @IBOutlet weak var propertyType: UITextField!
-//    @IBOutlet weak var contractStart: UITextField!
-//    @IBOutlet weak var contractEnd: UITextField!
+    @IBOutlet weak var contractStart: UITextField!
+    @IBOutlet weak var contractEnd: UITextField!
     @IBOutlet weak var landLord: UITextField!
     @IBOutlet weak var landlordContact: UITextField!
     @IBOutlet weak var numberFlatMate: UITextField!
@@ -71,8 +71,8 @@ class PropTwoViewController: UIViewController {
         let postcode:NSString = postCode.text!
         let streetname:NSString = streetName.text!
         let propertytype:NSString = propertyType.text!
-        //        let contractstart:NSDate = dateFormatter.dateFromString(contractStart.text!)!
-        //        let contractend:NSDate = dateFormatter.dateFromString(contractEnd.text!)!
+        let contractstart:NSString = contractStart.text!
+        let contractend:NSString = contractEnd.text!
         let landlord:NSString = landLord.text!
         let landlordcontact:NSString = landlordContact.text!
         let numbermate: Int? = Int(numberFlatMate.text!)
@@ -81,7 +81,7 @@ class PropTwoViewController: UIViewController {
         
         
         let session = NSURLSession.sharedSession()
-        let newPropertyPost: NSDictionary = ["location_area": locationarea,"post_code":postcode,"street_name":streetname,"landlord_name":landlord,"landlord_contact_details":landlordcontact,"property_type":propertytype,"number_of_flatmates":numbermate!,"monthly_cost":proprent!,"deposit_amount":propdeposit!,"inclusive":false]
+        let newPropertyPost: NSDictionary = ["location_area": locationarea,"post_code":postcode,"street_name":streetname,"landlord_name":landlord,"landlord_contact_details":landlordcontact,"property_type":propertytype,"number_of_flatmates":numbermate!,"monthly_cost":proprent!,"deposit_amount":propdeposit!,"inclusive":false, "contract_start": contractstart, "contract_end": contractend]
         let path: String = "https://housematey.herokuapp.com/properties_only"
         let url = NSMutableURLRequest(URL: NSURL(string: path)!)
         url.HTTPMethod = "POST"

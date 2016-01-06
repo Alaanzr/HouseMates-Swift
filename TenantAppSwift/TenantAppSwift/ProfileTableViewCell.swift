@@ -12,6 +12,8 @@ class ProfileTableViewCell: UITableViewCell {
     
     // MARK: Properties
     
+    
+    
     @IBOutlet weak var streetnameLabel: UILabel!
     
     @IBOutlet weak var postcodeLabel: UILabel!
@@ -19,6 +21,10 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var propertytypeLabel: UILabel!
     
     @IBOutlet weak var monthlycostLabel: UILabel!
+    
+    @IBOutlet weak var startdateLabel: UILabel!
+    
+    @IBOutlet weak var enddateLabel: UILabel!
     
 
     override func awakeFromNib() {
