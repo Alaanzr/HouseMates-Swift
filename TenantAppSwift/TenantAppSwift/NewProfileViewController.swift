@@ -8,14 +8,17 @@
 
 import UIKit
 
-class NewProfileViewController: UIViewController, UITextFieldDelegate {
+class NewProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let loggedUser = LoggedUser.sharedInstance
+    
+    var imagePicker = UIImagePickerController()
 
     // Info provided at Sign Up
     @IBOutlet weak var loggedUserName: UILabel!
     @IBOutlet weak var loggedFullName: UILabel!
     @IBOutlet weak var loggedEmail: UILabel!
+    @IBOutlet weak var userPicture: UIImageView!
     
     // New Info
     @IBOutlet weak var targetedArea: UITextField!
@@ -24,18 +27,52 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var noticePeriod: UITextField!
     
     
+    
+    @IBAction func photofromLibrary(sender: UIButton) {
+        
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.modalPresentationStyle = .Popover
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(
+        picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        userPicture.contentMode = .ScaleAspectFit //3
+        userPicture.image = chosenImage //4
+        dismissViewControllerAnimated(true, completion: nil) //5
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.loggedUserName.text = "Username: \(loggedUser.username)"
         self.loggedFullName.text = "\(loggedUser.firstname) \(loggedUser.lastname)"
         self.loggedEmail.text = loggedUser.email
+        imagePicker.delegate = self
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+        
+
     
     @IBAction func stepone(sender: UIButton) {
         let targetarea:NSString = targetedArea.text!
@@ -100,18 +137,10 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
+    
 }
 
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+    

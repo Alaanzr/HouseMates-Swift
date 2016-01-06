@@ -10,12 +10,14 @@ import UIKit
 
 class ConnectionsTableViewCell: UITableViewCell {
     
-    
+
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var targetareaLabel: UILabel!
     
     @IBOutlet weak var targetrentLabel: UILabel!
+    
+    
     
 
     override func awakeFromNib() {

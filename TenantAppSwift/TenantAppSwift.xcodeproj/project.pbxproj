@@ -31,6 +31,7 @@
 		CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA011C39802400798AD8 /* loggedUserService.swift */; };
 		CA84DA061C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */; };
 		CA84DA081C3AFDAB00798AD8 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */; };
+		CA84DA0A1C3D322B00798AD8 /* truncateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA091C3D322B00798AD8 /* truncateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		CA84DA011C39802400798AD8 /* loggedUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loggedUserService.swift; sourceTree = "<group>"; };
 		CA84DA051C3AFCBA00798AD8 /* ConnectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewCell.swift; sourceTree = "<group>"; };
 		CA84DA071C3AFDAB00798AD8 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
+		CA84DA091C3D322B00798AD8 /* truncateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = truncateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				CA84D9F71C380E8000798AD8 /* LoggedUser.swift */,
 				498A473D1C257367008DCE8F /* SwiftyJSON.swift */,
 				CA70F71B1C22D1B6005692F2 /* Info.plist */,
+				CA84DA091C3D322B00798AD8 /* truncateService.swift */,
 			);
 			path = TenantAppSwift;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				CA70F7121C22D1B6005692F2 /* ViewController.swift in Sources */,
 				CA70F7CC1C31852D005692F2 /* Property.swift in Sources */,
 				CA70F7101C22D1B6005692F2 /* AppDelegate.swift in Sources */,
+				CA84DA0A1C3D322B00798AD8 /* truncateService.swift in Sources */,
 				CA70F7C41C2EAF75005692F2 /* SignupViewController.swift in Sources */,
 				CA70F7C81C317D4E005692F2 /* ProfileTableViewCell.swift in Sources */,
 				494E6BC01C282CF4004F685A /* getService.swift in Sources */,

@@ -14,9 +14,12 @@ class ConnectionsTableViewController: UITableViewController {
     let loggedUser = LoggedUser.sharedInstance
     
     var connections = [User]()
+    var lbl_header = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    loadSampleUserProperties(loggedUser.id)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,16 +43,18 @@ class ConnectionsTableViewController: UITableViewController {
             for object in json.arrayValue {
                 
                 
-//                let userPropertyId = object["_id"].stringValue
-//                let userPropertyPostCode = object["post_code"].stringValue
-//                let userPropertyStreetName = object["street_name"].stringValue
-//                let userPropertyPropertyType = object["property_type"].stringValue
-//                let userPropertyMonthlyCost = object["monthly_cost"].intValue
-//                
-//                let userConnection = User(id: userPropertyId, post_code: userPropertyPostCode, street_name: userPropertyStreetName, property_type: userPropertyPropertyType, monthly_cost: userPropertyMonthlyCost)!
+                let userConId = object["_id"].stringValue
+                let userConUsername = object["username"].stringValue
+                let userConFirstname = object["firstName"].stringValue
+                let userConLastname = object["lastName"].stringValue
+                let userConTargetArea = object["currentArea"].stringValue
+                let userConTargetRent = object["currentRentBand"].intValue
                 
-//                self.connections.append(userConnection)
+                let userConnection = User(id: userConId, username: userConUsername, firstname: userConFirstname, lastname: userConLastname,targetArea: userConTargetArea, targetRent: userConTargetRent)!
+            
                 
+                self.connections.append(userConnection)
+                print(self.connections[0].targetArea)
                 
             }
             
@@ -82,8 +87,8 @@ class ConnectionsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "ConnectionsTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ConnectionsTableViewCell
+        let NewcellIdentifier = "ConnectionsTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(NewcellIdentifier, forIndexPath: indexPath) as! ConnectionsTableViewCell
 
         let connection = connections[indexPath.row]
         
@@ -94,49 +99,16 @@ class ConnectionsTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, viewForHeaderInSection  section: Int) -> UIView?
+    {
+        self.lbl_header.frame = CGRectMake(20, 20, self.view.frame.size.width, 150)
+        self.lbl_header.text = "My connections"
+        self.lbl_header.backgroundColor = UIColor.lightGrayColor()
+        self.lbl_header.textColor = UIColor.whiteColor()
+        self.lbl_header.textAlignment = NSTextAlignment.Center
+        return self.lbl_header
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
