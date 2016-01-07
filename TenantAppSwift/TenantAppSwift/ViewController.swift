@@ -20,7 +20,10 @@ class ViewController: UIViewController {
     
     
         override func viewDidLoad() {
-
+            super.viewDidLoad()
+            
+            self.view.backgroundColor = UIColor(hexString: "cbcbcc")
+            
             let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
             view.addGestureRecognizer(tap)
         
@@ -45,8 +48,8 @@ class ViewController: UIViewController {
     
     @IBAction func signin(sender: UIButton) {
         
-//        self.usernameSignIn.text = "ezzyelliott"
-//        self.passwordSignIn.text = "ezzyelliott"
+        self.usernameSignIn.text = "supermario"
+        self.passwordSignIn.text = "supermario"
         
         print("userName: \(usernameSignIn.text!)")
         print("password: \(passwordSignIn.text!)")

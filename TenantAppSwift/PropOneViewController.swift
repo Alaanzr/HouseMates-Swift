@@ -85,7 +85,23 @@ class PropOneViewController: UIViewController {
         let propdeposit: Int? = Int(deposit.text!)
         
         
+        if ( locationarea.isEqualToString("") || postcode.isEqualToString("") || streetname.isEqualToString("") || propertytype.isEqualToString("") || contractstart.isEqualToString("") || contractend.isEqualToString("") || landlord.isEqualToString("") || landlordcontact.isEqualToString("") || (numbermate == nil) || (proprent == nil) || (propdeposit == nil)) {
+            
+            let alertView:UIAlertView = UIAlertView()
+            alertView.title = "Failed!"
+            alertView.message = "Please enter full details"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            
+        } else {
+            do {
+        
+        
         let session = NSURLSession.sharedSession()
+        
+        
+        
         let newPropertyPost: NSDictionary = ["location_area": locationarea,"post_code":postcode,"street_name":streetname,"landlord_name":landlord,"landlord_contact_details":landlordcontact,"property_type":propertytype,"number_of_flatmates":numbermate!,"monthly_cost":proprent!,"deposit_amount":propdeposit!,"inclusive":false, "contract_start": contractstart, "contract_end": contractend]
         let path: String = "https://housematey.herokuapp.com/properties_only"
         let url = NSMutableURLRequest(URL: NSURL(string: path)!)
@@ -137,8 +153,10 @@ class PropOneViewController: UIViewController {
             }
         })
         task.resume()
-
-    }
+    
+            }
+        }
+}
     
     func assignNewProperty(properties: NSArray) {
         

@@ -40,8 +40,6 @@ class PropTwoViewController: UIViewController {
         
         self.loggedUserName.text = "Username: \(loggedUser.username)"
         self.loggedFullName.text = "\(loggedUser.firstname) \(loggedUser.lastname)"
-        self.loggedEmail.text = loggedUser.email
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
@@ -80,6 +78,18 @@ class PropTwoViewController: UIViewController {
         let proprent: Int? = Int(rent.text!)
         let propdeposit: Int? = Int(deposit.text!)
         
+    
+         if ( locationarea.isEqualToString("") || postcode.isEqualToString("") || streetname.isEqualToString("") || propertytype.isEqualToString("") || contractstart.isEqualToString("") || contractend.isEqualToString("") || landlord.isEqualToString("") || landlordcontact.isEqualToString("") || (numbermate == nil) || (proprent == nil) || (propdeposit == nil)) {
+            
+            let alertView:UIAlertView = UIAlertView()
+            alertView.title = "Failed!"
+            alertView.message = "Please enter full details"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            
+         } else {
+            do {
         
         let session = NSURLSession.sharedSession()
         let newPropertyPost: NSDictionary = ["location_area": locationarea,"post_code":postcode,"street_name":streetname,"landlord_name":landlord,"landlord_contact_details":landlordcontact,"property_type":propertytype,"number_of_flatmates":numbermate!,"monthly_cost":proprent!,"deposit_amount":propdeposit!,"inclusive":false, "contract_start": contractstart, "contract_end": contractend]
@@ -133,8 +143,9 @@ class PropTwoViewController: UIViewController {
             }
         })
         task.resume()
-        
+        }
     }
+}
     
     func assignNewProperty(properties: NSArray) {
         
@@ -174,5 +185,6 @@ class PropTwoViewController: UIViewController {
         })
         task.resume()
     }
+        
     
 }

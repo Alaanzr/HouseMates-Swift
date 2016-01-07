@@ -93,8 +93,8 @@ class ConnectionsTableViewController: UITableViewController {
         let connection = connections[indexPath.row]
         
         cell.usernameLabel.text = connection.username
-        cell.targetareaLabel.text = connection.targetArea
-        cell.targetrentLabel.text = String(connection.targetRent)
+        cell.targetareaLabel.text = "Targeted area: \(connection.targetArea)"
+        cell.targetrentLabel.text = "Budget(£): \(String(connection.targetRent))"
 
         return cell
     }

@@ -34,6 +34,7 @@
 		CA84DA0A1C3D322B00798AD8 /* truncateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA091C3D322B00798AD8 /* truncateService.swift */; };
 		CA84DA0C1C3D50D300798AD8 /* InvitationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA0B1C3D50D300798AD8 /* InvitationsTableViewController.swift */; };
 		CA84DA0E1C3D512400798AD8 /* InvitationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA0D1C3D512300798AD8 /* InvitationsTableViewCell.swift */; };
+		CA84DA101C3ECB2900798AD8 /* colorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84DA0F1C3ECB2900798AD8 /* colorService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CA84DA091C3D322B00798AD8 /* truncateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = truncateService.swift; sourceTree = "<group>"; };
 		CA84DA0B1C3D50D300798AD8 /* InvitationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationsTableViewController.swift; sourceTree = "<group>"; };
 		CA84DA0D1C3D512300798AD8 /* InvitationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationsTableViewCell.swift; sourceTree = "<group>"; };
+		CA84DA0F1C3ECB2900798AD8 /* colorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CA70F70F1C22D1B6005692F2 /* AppDelegate.swift */,
+				CA84DA0F1C3ECB2900798AD8 /* colorService.swift */,
 				CA84D9FB1C390E5000798AD8 /* PropOneViewController.swift */,
 				CA70F7111C22D1B6005692F2 /* ViewController.swift */,
 				CA84D9FF1C397F7C00798AD8 /* UserProperties.swift */,
@@ -336,6 +339,7 @@
 				CA84DA021C39802400798AD8 /* loggedUserService.swift in Sources */,
 				CA84D9F61C358F9D00798AD8 /* NewProfileViewController.swift in Sources */,
 				CA84DA081C3AFDAB00798AD8 /* ConnectionsTableViewController.swift in Sources */,
+				CA84DA101C3ECB2900798AD8 /* colorService.swift in Sources */,
 				CA70F7CE1C31883E005692F2 /* ProfileTableViewController.swift in Sources */,
 				498A473E1C257367008DCE8F /* SwiftyJSON.swift in Sources */,
 			);

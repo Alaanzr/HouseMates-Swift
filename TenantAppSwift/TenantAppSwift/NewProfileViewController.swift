@@ -88,10 +88,10 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate, UIImagePi
         let noticeperiod: Int? = Int(noticePeriod.text!)
         
         
-        if ( targetarea.isEqualToString("") || (rentband == 0) || (noticeperiod == 0)) {
+        if ( targetarea.isEqualToString("") || (rentband == nil) || (noticeperiod == nil)) {
             
             let alertView:UIAlertView = UIAlertView()
-            alertView.title = "Sign Up Failed!"
+            alertView.title = "Failed!"
             alertView.message = "Please enter complete search information"
             alertView.delegate = self
             alertView.addButtonWithTitle("OK")

@@ -26,15 +26,26 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var userPicture: UIImageView!
     @IBOutlet weak var targetareaLabel: UILabel!
     @IBOutlet weak var targetrentLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(hexString: "#f5f5f5")
         loadSampleUserProperties(loggedUser.id)
         loadSampleUserDetails(loggedUser.id)
             }
     
     
+    @IBAction func checkConnections(sender: UIButton) {
+        self.performSegueWithIdentifier("checkCon", sender: self)
+        
+    }
+    
+    
+    @IBAction func checkInvitations(sender: UIButton) {
+        self.performSegueWithIdentifier("checkInv", sender: self)
+    }
     
     func loadSampleUserDetails(userId: String) {
         
