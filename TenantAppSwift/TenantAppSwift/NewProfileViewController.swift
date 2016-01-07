@@ -22,10 +22,14 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     // New Info
     @IBOutlet weak var targetedArea: UITextField!
-    @IBOutlet weak var searchDescription: UITextField!
     @IBOutlet weak var rentBand: UITextField!
     @IBOutlet weak var noticePeriod: UITextField!
     
+    // Labels and buttons
+    
+    @IBOutlet weak var yoursearchLabel: UILabel!
+    @IBOutlet weak var loadpictureLabel: UIButton!
+    @IBOutlet weak var nextLabel: UIButton!
     
     
     @IBAction func photofromLibrary(sender: UIButton) {
@@ -54,11 +58,28 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Navigation bar formatting
+        
+        let logo = UIImage(named: "logo2")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "419bd2")
+        
+        //Background colour
+        
+        self.view.backgroundColor = UIColor(hexString: "cbcbcc")
 
         self.loggedUserName.text = "Username: \(loggedUser.username)"
         self.loggedFullName.text = "\(loggedUser.firstname) \(loggedUser.lastname)"
         self.loggedEmail.text = loggedUser.email
         imagePicker.delegate = self
+        
+        //Label and button colour background
+        
+        yoursearchLabel.backgroundColor = UIColor(hexString: "419bd2")
+        loadpictureLabel.backgroundColor = UIColor(hexString: "419bd2")
+        nextLabel.backgroundColor = UIColor(hexString: "419bd2")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)

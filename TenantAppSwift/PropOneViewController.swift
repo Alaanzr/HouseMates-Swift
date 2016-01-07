@@ -31,13 +31,35 @@ class PropOneViewController: UIViewController {
     @IBOutlet weak var numberFlatMate: UITextField!
     @IBOutlet weak var rent: UITextField!
     @IBOutlet weak var deposit: UITextField!
+    
+    // Property one labels and buttons
+    
+    @IBOutlet weak var historyLabel: UILabel!
+    
+    @IBOutlet weak var proponeLabel: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Navigation bar formatting
+        
+        let logo = UIImage(named: "logo2")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "419bd2")
+        
+        //Background colour
+        
+        self.view.backgroundColor = UIColor(hexString: "cbcbcc")
 
         self.loggedUserName.text = "Username: \(loggedUser.username)"
-        self.loggedFullName.text = "\(loggedUser.firstname) \(loggedUser.lastname)"
+        self.loggedFullName.text = "Full name: \(loggedUser.firstname) \(loggedUser.lastname)"
         self.loggedEmail.text = loggedUser.email
+        
+        // Label and button background colour
+        
+        historyLabel.backgroundColor = UIColor(hexString: "419bd2")
+        proponeLabel.backgroundColor = UIColor(hexString: "419bd2")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)

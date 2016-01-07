@@ -16,13 +16,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameSignIn: UITextField!
     
     @IBOutlet weak var passwordSignIn: UITextField!
-
     
+    @IBOutlet weak var signinButton: UIButton!
     
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            //Navigation bar formatting
+            
+            let logo = UIImage(named: "logo2")
+            let imageView = UIImageView(image:logo)
+            self.navigationItem.titleView = imageView
+            self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "419bd2")
+        
+            
+            //Background colour
+            
             self.view.backgroundColor = UIColor(hexString: "cbcbcc")
+            
+            //Button colour
+            
+           signinButton.backgroundColor = UIColor(hexString: "419bd2")
+
+            //Dismiss keyboard
             
             let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
             view.addGestureRecognizer(tap)
@@ -48,8 +64,8 @@ class ViewController: UIViewController {
     
     @IBAction func signin(sender: UIButton) {
         
-        self.usernameSignIn.text = "supermario"
-        self.passwordSignIn.text = "supermario"
+        self.usernameSignIn.text = "RGeller"
+        self.passwordSignIn.text = "password"
         
         print("userName: \(usernameSignIn.text!)")
         print("password: \(passwordSignIn.text!)")

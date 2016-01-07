@@ -35,11 +35,28 @@ class PropTwoViewController: UIViewController {
     @IBOutlet weak var deposit: UITextField!
     
     
+    @IBOutlet weak var historyLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Navigation bar formatting
+        
+        let logo = UIImage(named: "logo2")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "419bd2")
+        
+        //Background colour
+        
+        self.view.backgroundColor = UIColor(hexString: "cbcbcc")
+        
         self.loggedUserName.text = "Username: \(loggedUser.username)"
-        self.loggedFullName.text = "\(loggedUser.firstname) \(loggedUser.lastname)"
+        self.loggedFullName.text = "Full name: \(loggedUser.firstname) \(loggedUser.lastname)"
+        
+        // Label and button background colour
+        
+        historyLabel.backgroundColor = UIColor(hexString: "419bd2")
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }

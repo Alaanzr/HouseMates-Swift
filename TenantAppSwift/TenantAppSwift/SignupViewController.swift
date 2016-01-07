@@ -16,15 +16,28 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var lastnameSignUp: UITextField!
     @IBOutlet weak var emailSignUp: UITextField!
     @IBOutlet weak var passwordSignUp: UITextField!
-    
+    @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Navigation bar formatting
+        
+        let logo = UIImage(named: "logo2")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "419bd2")
+        
+        //Background colour
+        
+        self.view.backgroundColor = UIColor(hexString: "cbcbcc")
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
 
+        //Button colour
         
+        signupButton.backgroundColor = UIColor(hexString: "419bd2")
         
     }
     

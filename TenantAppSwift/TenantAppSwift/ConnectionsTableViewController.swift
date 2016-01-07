@@ -19,6 +19,17 @@ class ConnectionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Navigation bar formatting
+        
+        let logo = UIImage(named: "logo2")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "419bd2")
+        
+        //Background colour
+        
+        self.view.backgroundColor = UIColor(hexString: "cbcbcc")
+        
     loadSampleUserConnections(loggedUser.id)
 
         // Uncomment the following line to preserve selection between presentations
@@ -103,7 +114,7 @@ class ConnectionsTableViewController: UITableViewController {
     {
         self.lbl_header.frame = CGRectMake(20, 20, self.view.frame.size.width, 150)
         self.lbl_header.text = "My connections"
-        self.lbl_header.backgroundColor = UIColor.lightGrayColor()
+        self.lbl_header.backgroundColor = UIColor(hexString: "419bd2")
         self.lbl_header.textColor = UIColor.whiteColor()
         self.lbl_header.textAlignment = NSTextAlignment.Center
         return self.lbl_header
