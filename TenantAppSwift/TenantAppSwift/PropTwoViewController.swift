@@ -18,7 +18,6 @@ class PropTwoViewController: UIViewController {
     
     @IBOutlet weak var loggedUserName: UILabel!
     @IBOutlet weak var loggedFullName: UILabel!
-    @IBOutlet weak var loggedEmail: UILabel!
     
     // New Info
     
